@@ -1,0 +1,117 @@
+1. 문제
+select C.no, C.lec_duration, C.lec_time, T.t_name, L.lec_name, CL.class_no 
+from tbl_current_lecture C
+inner join tbl_classroom CL on C.class_no = CL.class_no
+inner join tbl_lecture L on C.lec_code = L.lec_code
+inner join tbl_teacher T on C.t_id = T.t_id
+;
+
+2. 문제
+create or replace view view_current_lecture
+select C.no, C.lec_duration, C.lec_time, T.t_name, L.lec_name, CL.class_no 
+from tbl_current_lecture C
+inner join tbl_classroom CL on C.class_no = CL.class_no
+inner join tbl_lecture L on C.lec_code = L.lec_code
+inner join tbl_teacher T on C.t_id = T.t_id
+;
+select * from view_current_lecture;
+
+3. 문제
+select lec_name, 
+sum(if(lec_time='09:00 - 12:00',1,0)) as '09:00 - 12:00',
+sum(if(lec_time='13:00 - 15:00',1,0)) as '13:00 - 15:00',
+sum(if(lec_time='15:00 - 17:00',1,0)) as '15:00 - 17:00'
+from view_current_lecture
+group by lec_name with rollup;
+drop procedure proc_insert_tbl_registration;
+
+4. 문제
+delimiter $$
+create procedure proc_insert_tbl_registration(in s_id varchar(45), in lec_code int, in lec_duration varchar(100))
+begin
+    DECLARE error_code VARCHAR(5);
+    DECLARE error_msg VARCHAR(255);
+
+    DECLARE CONTINUE HANDLER FOR 1062
+    begin
+        show errors;
+        get diagnostics condition 1
+            error_code = mysql_errno,
+            error_msg = message_text;
+        INSERT INTO tbl_errlog VALUES(no, error_code, now(), error_msg);
+    end;
+
+    DECLARE CONTINUE HANDLER FOR 1452
+    begin
+        show errors;
+        get diagnostics condition 1
+            error_code = mysql_errno,
+            error_msg = message_text;
+        INSERT INTO tbl_errlog VALUES(no, error_code, now(), error_msg);
+	
+    end;
+    BEGIN
+        INSERT INTO tbl_registration VALUES(s_id, lec_code, lec_duration);
+    END;
+    select * from tbl_registration;
+end $$
+delimiter ;
+
+5. 문제
+delimiter $$
+create trigger tbl_student_update_trg
+after update 
+on tbl_student
+for each row 
+begin
+   insert into tbl_student_bak values(
+      old.s_id, old.s_name, old.s_phone,"2024-02-16",delete_date
+   );
+end $$
+delimiter ;
+
+-- DROP TRIGGER IF EXISTS tbl_student_update_trg;
+
+insert into tbl_student values('20191234','나나나','010-1234-1234');
+update tbl_student set s_name='우우우' where s_id='20191234';
+select * from tbl_student;
+select * from tbl_student_bak;
+
+-- 6번문제
+delimiter $$
+create trigger tbl_teacher_update_trg
+after update 
+on tbl_student
+for each row 
+begin
+   insert into tbl_teacher_bak values(
+      old.s_id, old.s_name, old.s_phone,"2024-02-16",delete_date
+   );
+end $$
+delimiter ;
+
+-- 7번문제
+delimiter $$
+create trigger tbl_student_delete_trg
+after delete
+on tbl_student
+for each row 
+begin
+   insert into tbl_student_bak values(
+      old.s_id, old.s_name, old.s_phone,"2024-02-16",delete_date
+   );
+end $$
+delimiter ;
+
+-- 8번 문제
+delimiter $$
+create trigger tbl_teacher_delete_trg
+after delete 
+on tbl_student
+for each row 
+begin
+   insert into tbl_teacher_bak values(
+      old.s_id, old.s_name, old.s_phone,"2024-02-16",delete_date
+   );
+end $$
+delimiter ;

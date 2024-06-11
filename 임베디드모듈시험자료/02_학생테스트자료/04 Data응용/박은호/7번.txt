@@ -1,0 +1,14 @@
+-- 7번 문제 --
+DELIMITER $$
+
+CREATE TRIGGER tbl_student_delete_trg
+AFTER DELETE
+ON tbl_student
+FOR EACH ROW
+BEGIN
+    INSERT INTO tbl_student_bak (s_id, s_name, s_phone, update_date, delete_date)
+    VALUES (OLD.s_id, OLD.s_name, OLD.s_phone, NOW(), NOW());
+END $$
+
+
+DELIMITER ;

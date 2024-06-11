@@ -1,0 +1,154 @@
+-----Mysqld 명령어로 Mysql Server root로 접속하기--------
+
+C:\Users\Administrator>mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+-----2. DB 생성하기-------------------------
+
+
+mysql> create database testdb2;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| lmsdb              |
+| mysql              |
+| performance_schema |
+| sys                |
+| testdb             |
+| testdb2            |
++--------------------+
+7 rows in set (0.00 sec)
+
+----- [create] tbl_student을 만드는 SQL문을 작성합니다.-------
+
+mysql> use testdb2;
+Database changed
+mysql> create table tbl_student(
+    -> id int primary key,
+    -> name varchar(45) not null,
+    -> addr varchar(45) not null,
+    -> phone varchar(45) not null);
+Query OK, 0 rows affected (0.02 sec)
+
+
+mysql> desc tbl_student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | NO   | PRI | NULL    |       |
+| name  | varchar(45) | NO   |     | NULL    |       |
+| addr  | varchar(45) | NO   |     | NULL    |       |
+| phone | varchar(45) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+-----[alter] 열을 추가하는 SQL문을 작성합니다. (gender varchar(1) null)-----
+
+
+mysql> alter table tbl_student add column (gender varchar(1) null);
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc tbl_student;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | NO   | PRI | NULL    |       |
+| name   | varchar(45) | NO   |     | NULL    |       |
+| addr   | varchar(45) | NO   |     | NULL    |       |
+| phone  | varchar(45) | NO   |     | NULL    |       |
+| gender | varchar(1)  | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+
+-----[drop] phone열을 제거 하는 SQL문을 작성합니다.------------------
+
+
+mysql> alter table tbl_student drop phone;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc tbl_student;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | NO   | PRI | NULL    |       |
+| name   | varchar(45) | NO   |     | NULL    |       |
+| addr   | varchar(45) | NO   |     | NULL    |       |
+| gender | varchar(1)  | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+-----[insert] SQL문으로 다음 내용이 삽입될 수 있도록 하는 INSERT 문을 작성하세요-----
+
+mysql> insert into testdb2.tbl_student values('1', '홍길동', '대구', 'M');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into testdb2.tbl_student values('2', '기명이', '울산', 'M');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into testdb2.tbl_student values('3', '김미녀', '인천', 'W');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from tbl_student;
++----+--------+------+--------+
+| id | name   | addr | gender |
++----+--------+------+--------+
+|  1 | 홍길동 | 대구 | M      |
+|  2 | 기명이 | 울산 | M      |
+|  3 | 김미녀 | 인천 | W      |
++----+--------+------+--------+
+3 rows in set (0.00 sec)
+
+-----[update] SQL문으로 다음 내용이 수정될 수 있도록 하는 UPDATE 문을 작성하세요.-------
+
+mysql> update tbl_student set name='남길동' where id='1';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update tbl_student set addr='창원' where id='3';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from tbl_student;
++----+--------+------+--------+
+| id | name   | addr | gender |
++----+--------+------+--------+
+|  1 | 남길동 | 대구 | M      |
+|  2 | 기명이 | 울산 | M      |
+|  3 | 김미녀 | 창원 | W      |
++----+--------+------+--------+
+3 rows in set (0.00 sec)
+
+
+-----[delete] SQL문으로 다음 내용이 삭제될 수 있도록 하는 DELETE 문을 작성하세요.------
+
+mysql> delete from tbl_student where id='2';
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from tbl_student;
++----+--------+------+--------+
+| id | name   | addr | gender |
++----+--------+------+--------+
+|  1 | 남길동 | 대구 | M      |
+|  3 | 김미녀 | 창원 | W      |
++----+--------+------+--------+
+2 rows in set (0.00 sec)

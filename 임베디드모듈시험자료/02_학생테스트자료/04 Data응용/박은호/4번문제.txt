@@ -1,0 +1,27 @@
+-- 4번 문제 -- 
+DELIMITER $$
+
+CREATE PROCEDURE proc_insert_tbl_registration(
+    IN sid VARCHAR(45), 
+    IN lcode INT, 
+    IN lduration VARCHAR(100)
+)
+BEGIN
+    DECLARE error_code INT;
+    DECLARE error_message TEXT;
+    
+    -- PK 중복 여부 확인
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS CONDITION 1
+            error_code = MYSQL_ERRNO,
+            error_message = MESSAGE_TEXT;
+        INSERT INTO tbl_errlog (error_code, error_msg) VALUES (error_code, error_message);
+    END;
+
+    INSERT INTO tbl_registration (s_id, lec_code, lec_duration) VALUES (sid, lcode, lduration);
+END $$
+
+DELIMITER ;
+
+

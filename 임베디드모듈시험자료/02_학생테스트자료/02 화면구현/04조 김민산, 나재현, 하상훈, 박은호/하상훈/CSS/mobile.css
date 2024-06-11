@@ -1,0 +1,70 @@
+/* div{ 
+    height:50px;
+    background-color: royalblue;
+} */
+*{
+    box-sizing: border-box;
+   
+}
+body{
+    width : 480px;
+    margin : 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.wrapper{
+    width : 400px;
+    border : 0px;
+    margin : 0 auto;
+}
+
+.wrapper>header{
+    height : 270px;
+}
+
+/* 로고는 안보이게 */
+.wrapper>header>.header-left{
+    display:none !important;
+}
+.wrapper>header>.header-right{
+    height : 250px !important;    
+    display:block;
+   
+    
+}
+
+.wrapper>header>.header-right>.top-header{
+   
+    display:flex;
+    justify-content: right !important;
+    align-items: center;
+}
+.wrapper>header>.header-right>.top-header>.menu{
+    display:none !important;
+}
+
+/* topheader mobile menu 보이게 */
+.wrapper>header>.header-right>.top-header>.mobile-menu{
+    display:block !important;
+    border : 0px;
+}
+
+.wrapper>header>.header-right>nav{
+  height : 185px !important;
+
+}
+/* main은 기본 block */
+.wrapper>main{
+
+}
+.wrapper>main>section{
+    display:flex !important;
+    flex-direction: column !important;
+}
+
+/* 앞뒤 애니메이션 없애기 */
+.container{
+    display:none;
+}

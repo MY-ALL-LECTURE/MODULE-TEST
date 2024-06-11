@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        @media (max-width:700px) {
+            .header-right{
+                background-color: yellow;
+            }
+        }
+        html{font-family: SDGothic,HGG,Malgun Gothic,"\B9D1\C740 \ACE0\B515",dotum,"\B3CB\C6C0",sans-serif;}
+    </style>
+    
+
+
+    <!-- /* Tablet */ -->
+    <link rel="stylesheet" href="./css/tablet.css" media="all an d (max-width:1024px)">
+
+    <!-- /* Mobile */ -->
+    <link rel="stylesheet" href="./css/mobile.css" media="all and (max-width:480px)">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/real.css">
+
+
+    
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Sementic 태그 :웹문서를 의미 있는 블록으로 나누어 구조를 만드는데 사용되는 태그
+        <header>    : 헤더 섹셕
+        <nav>       : 네비게이션 링크 섹션
+        <section>   : main안의 특정 영역 지정 섹션
+        <article>   : 문서의 본문 섹션
+        <aside>     : 문서의 사이드바 영역
+        <footer>    : 푸터 영역
+        <main>      : 문서 주요 컨텐츠 영역
+     -->
+
+    <div class="wrapper">
+        <header>
+            <div id="app"></div>
+            <div class="logo header-left">
+                <img src="./images/logo.gif" alt="LOGO">
+            </div>
+            <div class="header-right">
+                <div class="top-header">
+                    <div class="mobile-menu">
+                        <span class="material-symbols-outlined">menu</span>
+                    </div>
+                </div>
+                <nav>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="">메뉴소개</a>
+                            <ul class="submenu">
+                                <li><a href="">스페셜&할인팩</a></li>
+                                <li><a href="">신제품(NEW)</a></li>
+                                <li><a href="">프리미엄</a></li>
+                                <li><a href="">와퍼&주니어</a></li>
+                                <li><a href="">치킨&슈림프버거</a></li>
+                                <li><a href="">올데이킹&킹모닝</a></li>
+                                <li><a href="">사이드</a></li>
+                                <li><a href="">음료&디저트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">매장소개</a>
+                            <ul class="submenu">
+                                <li><a href="">매장찾기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">이벤트</a>
+                            <ul class="submenu">
+                                <li><a href="">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">브랜드스토리</a>
+                            <ul class="submenu">
+                                <li><a href="">BRAND</a></li>
+                                <li><a href="">WHOPPER</a></li>
+                                <li><a href="">COMM.</a></li>
+                            </ul>
+                        </li>
+                        <li class="chain">
+                            <a href="">가맹점 문의</a>
+                        </li>
+                        <li class="dei">
+                            <a href="">딜리버리 주문</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </header>
+        <main>
+            
+
+            <section class="main--section">
+                <aside>
+                    <iframe width="560" height="480" src="https://www.youtube.com/embed/DoZKif1IOiU?si=ZrGaddDxsXoZ8hD-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </aside>
+                <article>
+                    <div class="whop">
+                        <a href=""><img src="./images/whopper.png" alt=""></a>
+                    </div>    
+                </article>
+            </section>
+
+            <section class="sub--section">
+                <article class="userapp">    
+                       
+                        <div class="use">
+                            <a href="#"><img src="./images/app.jpg"></a>
+                            
+                        </div>  
+                </article>
+                
+                <aside>
+                    <div class="user">
+                        <a href="#"><img src="./images/delivery.jpg"></a>
+                    </div>
+                </aside>
+            </section>
+            <section class="last--section">
+                <article>
+                    <div class="findshop">
+                        <div>고객님 주변에 있는 버거킹을 찾아보세요!</div>
+                        <a href="">매장찾기</a>
+                    </div>
+                    <ul class="shop_categorylist">
+                        <li class="category_delivery">
+                            <span class="WEB">
+                                "집에서 편안하게"
+                                <br>
+                                "받을 수 있는"
+                            </span>
+                            <br>
+                            <a class="omg">딜리버리</a>
+                        </li>
+                        <li class="category_king">
+                            <span class="WEB">
+                                "미리 주문하고"
+                                <br>
+                                "픽업가능한"
+                            </span>
+                            <br>
+                            <a class="omg">킹오더</a>
+                        </li>
+                        <li class="category_drive">
+                            <span class="WEB">
+                                "차안에서 빠르게"
+                                <br>
+                                "이용할 수 있는"
+                            </span>
+                            <br>
+                            <a class="omg">드라이브 스루</a>
+                        </li>
+                        <li class="category_24">
+                            <span class="WEB">
+                                "24시간 언제든"
+                                <br>
+                                "함께할 수 있는"
+                            </span>
+                            <br>
+                            <a class="omg">24시간</a>
+                        </li>
+                        <li class="category_morning">
+                            <span class="WEB">
+                                "든든한"
+                                <br>
+                                "아침을 도와줄"
+                            </span>
+                            <br>
+                            <a class="omg">아침메뉴</a>
+                        </li>
+                        <li class="category_parking">
+                            <span class="WEB">
+                                "내 차와 함께"
+                                <br>
+                                "올 수 있는"
+                            </span>
+                            <br>
+                            <a class="omg">주차공간</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="top-footer">
+                <div class="footer-menu">
+                    <h1>메뉴</h1>
+                    <li>스폐셜&할인팩</li>
+                    <li>신제품</li>
+                    <li>프리미엄</li>
+                    <li>와퍼&주니어</li>
+                    <li>치킨&슈림프버거</li>
+                    <li>올데이킹&킹모닝</li>
+                    <li>사이드</li>
+                    <li>음료&디저트</li>
+                </div>
+                <div class="footer-menu">
+                    <h1>매장</h1>
+                    <li>매장찾기</li>
+                </div>
+                <div class="footer-menu">
+                    <h1>이벤트</h1>
+                    <li>이벤트</li>
+                </div>
+                <div class="footer-menu">
+                    <h1>브랜드 스토리</h1>
+                    <li>BRAND</li>
+                    <li>WHOPPER</li>
+                    <li>COMM</li>
+                </div>
+                <div class="footer-menu">
+                    <h1>고객센터</h1>
+                    <li>공지사항</li>
+                    <li>버거킹앱이용안내</li>
+                    <li>FAQ</li>
+                    <li>문의</li>
+                    <li>가맹점모집</li>
+                    <li>인재채용</li>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="bottom-footer-left">
+                    <img src="data:image/png;base64,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" alt="">
+                
+                    <div>
+                        <p>서울 종로구 삼봉로 71 G 타워 4F,5F 주식회사 비케이알</p><br>
+                        <p>사업자 등록번호 101-86-76277 </p><br>
+                        <p>Copyright 2019 BKR Co., Ltd. All right Reserved</p><br>
+                    </div>
+                </div>
+                <div class="bottom-footer-right">
+                    <div>
+                        <span>이용약관&nbsp;&nbsp;</span>
+                        <span>개인정보처리방침&nbsp;&nbsp;</span>
+                        <span>법적고지</span>
+                    </div>
+                    <div class="bottom-footer-button">
+                        <a href="">인재채용</a>
+                        <a href="">가맹점모집</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    
+    <div class="container">
+        <div class="card">
+            <div class="front">버거킹에 온것을</div>
+            <div class="back">환영합니다!</div>
+        </div>
+    </div>
+
+    <div class="quick">
+    <a href="#app" class="btn_top" style="display: inline; opacity: 1;">Top</a>
+    </div>
+
+    
+</body>
+</html>

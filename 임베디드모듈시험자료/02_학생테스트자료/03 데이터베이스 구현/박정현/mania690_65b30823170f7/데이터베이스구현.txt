@@ -1,0 +1,26 @@
+
+[create]
+create table tbl_student (
+	id int not null,
+	name varchar(45) not null,
+	addr varchar(45) not null,
+	phone varchar(45) not null,
+	primary key(id));
+
+[alter]
+alter table tbl_student add column gender varchar(1) not null after phone;
+
+[drop]
+alter table tbl_student drop column phone;
+
+[insert]
+INSERT INTO tbl_student (`id` , `name` , `addr` , `gender`) VALUES ('1' , '홍길동' , '대구' , 'M');
+INSERT INTO tbl_student (`id` , `name` , `addr` , `gender`) VALUES ('2' , '기명이' , '울산' , 'M');
+INSERT INTO tbl_student (`id` , `name` , `addr` , `gender`) VALUES ('3' , '김미녀' , '인천' , 'W');
+
+[update]
+UPDATE tbl_student SET `addr` = '창원' WHERE (`id` = '3');
+UPDATE tbl_student SET `name` = '남길동' WHERE (`id` = '1');
+
+[delete]
+DELETE FROM tbl_student WHERE (`id` = '2');

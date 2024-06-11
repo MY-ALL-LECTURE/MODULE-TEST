@@ -1,0 +1,21 @@
+박정현 학생 
+inner join 시 on 이하 조건절이 생략된 항목이 있습니다(-10점)
+trigger 설정시 수정/삭제 date정보항목이 빠져있습니다.부분감점처리했습니다(각4점,3점)
+나머지는 문제 없습니다
+고생하셨습니다
+
+1.Inner Join View Pivot 생성 SQL 이 적절한가(30점)
+Inner Join SQL 은 적절한가 10점
+View Table 생성은 적절한가 10점
+피벗 테이블 생성은 적절한가 10점
+
+2. Procedure 생성 SQL 이 적절한가(40점)
+tbl_registration 에 PK 제약조건 위반시 tbl_errorlog에 저장이 되는가 15점
+tbl_registration 에 FK 제약조건 위반시 tbl_errorlog에 저장이 되는가 15점
+tbl_errorlog에 Date는 적절히 삽입 되는가 10점
+
+3. Trigger 생성 SQL 이 적절한가(30점)
+tbl_student 의 update trigger 는 적절한가 4점(-4)
+tbl_teacher 의 update trigger 는 적절한가 4점(-4)
+tbl_student 의 delete trigger 는 적절한가 3점(-3)
+tbl_teacher 의 delete trigger 는 적절한가 3점(-3)

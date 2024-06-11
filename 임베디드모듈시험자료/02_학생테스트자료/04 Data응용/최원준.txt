@@ -1,0 +1,22 @@
+최원준학생
+1번문제 join시 테이블명에 별칭을 붙여주는 것을 생략했습니다.
+PK,FK 예외 처리시 저장되는 날짜부분에는 현재 Date의 결과값을 넣어주면좋습니다
+curdate() 혹은 now()를 사용하면 될것같습니다
+나머지는 문제 없습니다
+고생하셨습니다
+
+1.Inner Join View Pivot 생성 SQL 이 적절한가(30점)
+Inner Join SQL 은 적절한가 5점(-5점)
+View Table 생성은 적절한가 10점
+피벗 테이블 생성은 적절한가 10점
+
+2. Procedure 생성 SQL 이 적절한가(40점)
+tbl_registration 에 PK 제약조건 위반시 tbl_errorlog에 저장이 되는가 10점(-5점)
+tbl_registration 에 FK 제약조건 위반시 tbl_errorlog에 저장이 되는가 10점(-5점)
+tbl_errorlog에 Date는 적절히 삽입 되는가 10점
+
+3. Trigger 생성 SQL 이 적절한가(30점)
+tbl_student 의 update trigger 는 적절한가 8점
+tbl_teacher 의 update trigger 는 적절한가 8점
+tbl_student 의 delete trigger 는 적절한가 7점
+tbl_teacher 의 delete trigger 는 적절한가 7점

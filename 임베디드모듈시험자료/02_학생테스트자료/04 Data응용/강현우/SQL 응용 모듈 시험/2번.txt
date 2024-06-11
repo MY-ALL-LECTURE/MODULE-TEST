@@ -1,0 +1,12 @@
+-- 2번
+
+create view view_current_lecture as
+select no, lec_duration, lec_time, t_name,lec_name, cl.class_no
+from tbl_current_lecture as cl
+inner join tbl_classroom
+on cl.class_no = tbl_classroom.class_no
+inner join tbl_lecture
+on cl.lec_code = tbl_lecture.lec_code
+inner join tbl_teacher
+
+select *from view_current_lecture;

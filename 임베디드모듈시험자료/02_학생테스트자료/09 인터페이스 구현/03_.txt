@@ -1,0 +1,37 @@
+[3 조] 이재형 조은파 강지영 윤지원 학생
+인터페이스 설계구현이 전혀 안되어 있습니다.각레이어당(-10, 총-30)
+문제가 인터페이스 구현인데. 전혀 안되어 있어 감점처리했습니다.
+다시 한번 확인해보시고 추가후 제출해주세요
+각 서비스는 Dao 와 의존관계선이 있어야 합니다(누락 ,-5)
+고생하셨습니다
+
+1. Presentation의 Interface 설계는 적절한가 (15점)
+SubController에 대한 Interface 설계는 적절한가 0점(-5)
+SubController와 Interface와의 관계선은 적절한가 5점
+FrontController와 Interface와의 관계선은 적절한가 0점(-5)
+
+2. Presentation Interface구현은 적절한가(15점)
+Interface클래스를 작성하고 관련 함수선언을 하였는가 5점
+SubController에서 Interface와 상속관계 구현을 하였는가 5점
+FrontController에서는 적절하게 Interface 사용을 하고 있는가 5점
+
+3. Business Interface 설계는 적절한가(20점)
+Service Interface를 설계하고 함수를 선언하였는가 5점
+기존 Service클래스를 ServiceImpl로 명명하고 기존 선언된 함수 정리를 하였는가 5점
+Service Interface와 ServiceImple간의 관계선은 적절한가 0점(-5)
+SubController와 Service Inteface와 관계선은 적절한가 0점(-5)
+
+4. Business Interface 구현은 적절한가(20점)
+Service Interface를 구현하였는가 5점
+Service Interface와 ServiceImpl간의 상속관계 처리 하였는가 10점
+SubController에서는 Service Interface를 이용하고 있는가 5점
+
+5. Persistence Interface 설계는 적절한가(15점)
+Dao의 상위클래스을 설계하였는가 5점
+Dao의 중복되는 코드를 상위클래스로 이전 하였는가 5점
+Dao와 상위클래스와의 관계선은 적절한가 5점
+
+6. Persistence Interface 구현은 적절한가(15점)
+Dao 상위클래스를 구현하였는가 0점(-5)
+Dao를 DaoImpl로 명명하고 상속받는 함수는 제외하였는가 0점(-5)
+Service계층에서 Dao상위클래스를 이용하고 있는가 0점(-5)

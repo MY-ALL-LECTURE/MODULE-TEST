@@ -1,0 +1,1 @@
+update tbl_student set `addr`='창원' where `id`=3;

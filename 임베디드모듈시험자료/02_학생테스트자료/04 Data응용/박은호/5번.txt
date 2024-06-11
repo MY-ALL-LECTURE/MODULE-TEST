@@ -1,0 +1,12 @@
+DELIMITER $$
+
+CREATE TRIGGER tbl_student_update_trg
+AFTER UPDATE
+ON tbl_student
+FOR EACH ROW
+BEGIN
+    INSERT INTO tbl_student_bak VALUES (
+        OLD.s_id, OLD.s_name, OLD.s_phone, OLD.update_date, NOW()
+    );
+END $$
+DELIMITER ;

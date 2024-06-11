@@ -1,0 +1,22 @@
+황보성현 학생
+view table생성시 as 구문이 없습니다(-10점)
+trigger설정시 now()함수를 사용해서 현재 날짜를 저장합니다(각-3점씩)
+나머지는 문제없습니다 
+고생하셨습니다
+
+
+1.Inner Join View Pivot 생성 SQL 이 적절한가(30점)
+Inner Join SQL 은 적절한가 10점
+View Table 생성은 적절한가 0점(-10)
+피벗 테이블 생성은 적절한가 10점
+
+2. Procedure 생성 SQL 이 적절한가(40점)
+tbl_registration 에 PK 제약조건 위반시 tbl_errorlog에 저장이 되는가 15점
+tbl_registration 에 FK 제약조건 위반시 tbl_errorlog에 저장이 되는가 15점
+tbl_errorlog에 Date는 적절히 삽입 되는가 10점
+
+3. Trigger 생성 SQL 이 적절한가(30점)
+tbl_student 의 update trigger 는 적절한가 5점(-3)
+tbl_teacher 의 update trigger 는 적절한가 5점(-3)
+tbl_student 의 delete trigger 는 적절한가 4점(-3)
+tbl_teacher 의 delete trigger 는 적절한가 4점(-3)

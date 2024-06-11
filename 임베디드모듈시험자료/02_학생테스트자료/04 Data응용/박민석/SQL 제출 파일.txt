@@ -1,0 +1,104 @@
+-- 1번 문제 풀이
+SELECT NO, CL.LEC_DURATION, CL.LEC_TIME, T_NAME, LEC_NAME, CL.CLASS_NO
+FROM TBL_CURRENT_LECTURE CL
+INNER JOIN TBL_LECTURE L
+ON CL.LEC_CODE = L.LEC_CODE
+INNER JOIN TBL_CLASSROOM C
+ON CL.CLASS_NO = C.CLASS_NO
+INNER JOIN TBL_TEACHER T
+ON CL.T_ID = T.T_ID;
+
+-- 2번 문제 풀이
+CREATE OR REPLACE VIEW view_current_lecture
+SELECT NO, CL.LEC_DURATION, CL.LEC_TIME, T_NAME, LEC_NAME, CL.CLASS_NO
+FROM TBL_CURRENT_LECTURE CL
+INNER JOIN TBL_LECTURE L
+ON CL.LEC_CODE = L.LEC_CODE
+INNER JOIN TBL_CLASSROOM C
+ON CL.CLASS_NO = C.CLASS_NO
+INNER JOIN TBL_TEACHER T
+ON CL.T_ID = T.T_ID;
+
+-- 3번 문제 풀이
+SELECT LEC_NAME,
+SUM( IF(LEC_TIME="09:00 - 12:00", 1, 0) ) AS "09:00 - 12:00",
+SUM( IF(LEC_TIME="13:00 - 15:00", 1, 0) ) AS "13:00 - 15:00",
+SUM( IF(LEC_TIME="15:00 - 17:00", 1, 0) ) AS "15:00 - 17:00"
+FROM view_current_lecture GROUP BY LEC_NAME WITH ROLLUP;
+
+-- 4번 문제 풀이
+DELIMITER $$
+CREATE PROCEDURE proc_insert_tbl_registration(in sid varchar(45), in lcode int, lduration varchar(100))
+BEGIN
+	DECLARE error_code VARCHAR(5);
+    DECLARE error_msg VARCHAR(255);
+    
+    DECLARE CONTINUE HANDLER FOR 1062
+    BEGIN
+		SHOW ERRORS;
+        GET DIAGNOSTICS CONDITION 1
+			error_code = MYSQL_ERRNO,
+            error_msg = MESSAGE_TEXT;
+		INSERT INTO tbl_errlog (error_code, error_date, error_msg) values (error_code, now(), error_msg);
+    END;
+    
+    DECLARE CONTINUE HANDLER FOR 1452
+    BEGIN
+		SHOW ERRORS;
+        GET DIAGNOSTICS CONDITION 1
+			error_code = MYSQL_ERRNO,
+            error_msg = MESSAGE_TEXT;
+		INSERT INTO tbl_errlog (error_code, error_date, error_msg) values (error_code, now(), error_msg);
+    END;
+    
+    INSERT INTO tbl_registration values (sid, lcode, lduration);
+END $$
+DELIMITER ;
+
+-- 5번 문제
+DELIMITER $$
+CREATE TRIGGER tbl_student_update_trg
+AFTER UPDATE
+ON tbl_student
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbl_student_bak ( s_id, s_name, s_phone, update_date ) VALUES
+    ( OLD.s_id, OLD.s_name, OLD.s_phone, now() );
+END $$
+DELIMITER ;
+
+-- 6번 문제
+DELIMITER $$
+CREATE TRIGGER tbl_teacher_update_trg
+AFTER UPDATE
+ON tbl_teacher
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbl_teacher_bak ( t_id, t_name, t_phone, t_addr, update_date ) VALUES
+    ( OLD.t_id, OLD.t_name, OLD.t_phone, OLD.t_addr, now() );
+END $$
+DELIMITER ;
+
+-- 7번 문제
+DELIMITER $$
+CREATE TRIGGER tbl_student_delete_trg
+AFTER DELETE
+ON tbl_student
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbl_student_bak ( s_id, s_name, s_phone, delete_date ) VALUES
+    ( OLD.s_id, OLD.s_name, OLD.s_phone, now() );
+END $$
+DELIMITER ;
+
+-- 8번 문제
+DELIMITER $$
+CREATE TRIGGER tbl_teacher_delete_trg
+AFTER DELETE
+ON tbl_teacher
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbl_teacher_bak ( t_id, t_name, t_phone, t_addr, delete_date ) VALUES
+    ( OLD.t_id, OLD.t_name, OLD.t_phone, OLD.t_addr, now() );
+END $$
+DELIMITER ;

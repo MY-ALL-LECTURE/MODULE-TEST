@@ -1,0 +1,85 @@
+1)
+SELECT a.no, a.lec_duration, a.lec_time, b.t_name, c.lec_name, d.class_no
+FROM tbl_current_lecture a
+INNER JOIN tbl_teacher b ON a.t_id = b.t_id
+INNER JOIN tbl_lecture c ON a.lec_code = c.lec_code
+INNER JOIN tbl_classroom d ;
+2)
+CREATE VIEW view_current_lecture AS
+SELECT a.no, a.lec_duration, a.lec_time, b.t_name, c.lec_name, d.class_no
+FROM tbl_current_lecture a
+INNER JOIN tbl_teacher b ON a.t_id = b.t_id
+INNER JOIN tbl_lecture c ON a.lec_code = c.lec_code
+INNER JOIN tbl_classroom d ON a.class_no = d.class_no;
+3)
+SELECT lec_name,
+    SUM(CASE WHEN lec_time = '09:00 - 12:00' THEN 1 ELSE 0 END) AS `09:00-12:00`,
+    SUM(CASE WHEN lec_time = '13:00 - 15:00' THEN 1 ELSE 0 END) AS `13:00-15:00`,
+    SUM(CASE WHEN lec_time = '15:00 - 17:00' THEN 1 ELSE 0 END) AS `15:00-17:00`
+FROM view_current_lecture
+GROUP BY lec_name UNION ALL
+SELECT
+    'Total' AS lec_name,
+    SUM(CASE WHEN lec_time = '09:00 - 12:00' THEN 1 ELSE 0 END),
+    SUM(CASE WHEN lec_time = '13:00 - 15:00' THEN 1 ELSE 0 END),
+    SUM(CASE WHEN lec_time = '15:00 - 17:00' THEN 1 ELSE 0 END)
+FROM view_current_lecture;
+4)
+DELIMITER //
+
+CREATE PROCEDURE proc_insert_tbl_registration (IN sid VARCHAR(45), IN lcode INT, IN lduration VARCHAR(100)) BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION BEGIN
+        INSERT INTO tbl_errlog (error_message, error_time)
+        VALUES (CONCAT('Error occurred in tbl_registration for sid:', sid), NOW());
+    END;
+    -- tbl_registration�� ���� INSERT �묒뾽 �섑뻾
+    INSERT INTO tbl_registration (sid, lcode, lduration)
+    SELECT sid, lcode, lduration
+    FROM view_current_lecture
+    WHERE lec_code = lcode;
+END//
+DELIMITER ;
+5)
+CREATE PROCEDURE tbl_student_update_trg()
+BEGIN
+    -- �댁쟾 �곗씠�곕� tbl_student_bak�� �쎌엯�⑸땲��.
+    INSERT INTO tbl_student_bak (s_id, s_name, s_phone, update_datee)
+    VALUES (OLD.sid, OLD.sname, OLD.semail, OLD.sphone, OLD.saddress);
+END $$
+
+DELIMITER ;
+6)
+CREATE TRIGGER tbl_teacher_update_trg
+BEFORE UPDATE ON tbl_teacher
+FOR EACH ROW
+BEGIN
+    -- �댁쟾 �곗씠�곕� tbl_teacher_bak�� �쎌엯�⑸땲��.
+    INSERT INTO tbl_teacher_bak (t_id, t_name, t_phone, t_addr,update_date)
+    VALUES (OLD.t_id, OLD.t_name, OLD.t_email, OLD.t_phone, OLD.t_address);
+END $$
+
+DELIMITER ;
+7)
+DELIMITER $$
+
+CREATE TRIGGER tbl_student_delete_trg
+BEFORE DELETE ON tbl_student
+FOR EACH ROW
+BEGIN
+    -- ��젣�섎뒗 �곗씠�곕� tbl_student_bak�� �쎌엯�⑸땲��.
+    INSERT INTO tbl_student_bak (s_id, s_name,  s_phone,update_date)
+    VALUES (OLD.sid, OLD.sname, OLD.semail, OLD.sphone, OLD.saddress);
+END $$
+
+DELIMITER ;
+8)
+CREATE TRIGGER tbl_teacher_delete_trg
+BEFORE DELETE ON tbl_teacher
+FOR EACH ROW
+BEGIN
+    -- ��젣�섎뒗 �곗씠�곕� tbl_teacher_bak�� �쎌엯�⑸땲��.
+    INSERT INTO tbl_teacher_bak (t_id, t_name, t_phone, t_addr,update_date)
+    VALUES (OLD.t_id, OLD.t_name, OLD.t_email, OLD.t_phone, OLD.t_address);
+END $$
+
+DELIMITER ;

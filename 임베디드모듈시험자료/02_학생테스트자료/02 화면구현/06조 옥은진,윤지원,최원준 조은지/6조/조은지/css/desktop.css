@@ -1,0 +1,44 @@
+/* .box>.contact{
+    display: block;
+} */
+
+.wrapper>main>.box>.contact .contact-line{
+    height: auto;
+}
+
+.wrapper>main>.box>.contact .contact-line>div>.call .call-time{
+    display: block;
+}
+
+
+.wrapper>main>.box>.contact .contact-line>.etc>div{
+    display: none;
+}
+
+.wrapper>main>.box>.contact .contact-line>ul>li{
+    width: 100%;
+}
+.mo{
+    display: none;
+}
+.wrapper>main>.box>.report{
+    height: auto;
+    width: 48%;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.wrapper>main>.box>.report>.safety{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1024px;
+}
+.wrapper>main>.box>.contact .contact-line>div>.email>span{
+    color: aqua;
+}
+
+.wrapper>main>.box>.report>.safety>.safety1,
+.wrapper>main>.box>.report>.safety>.safety2{
+    width: 100%;
+}

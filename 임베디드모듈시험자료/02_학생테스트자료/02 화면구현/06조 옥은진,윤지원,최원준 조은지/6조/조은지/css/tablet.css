@@ -1,0 +1,86 @@
+.wrapper>main>.box>.contact .contact-line{
+    padding: 10px 0;
+}
+.mo{
+    display: none;
+}
+
+.wrapper>main>.box>.contact .contact-line>div{
+    justify-content: center;
+    align-items: center;
+    min-width: 480px;
+}
+.wrapper>main>.box>.contact .contact-line>div>.email{
+    margin: 0;
+    padding-top: 20px;
+    cursor: pointer;
+    border-radius: 35px;
+    height: 10vh;
+    width: 100%;
+    flex-direction: column;
+    background-position-y: -150px;
+}
+
+
+.wrapper>main>.box>.contact .contact-line>div>.email>div{
+    display: none;
+
+}
+
+.wrapper>main>.box>.contact .contact-line>div>.call{
+    height: 10vh;
+    width: 100%;
+    padding-top: 20px;
+    background-position-y: -180px;
+}
+
+.wrapper>main>.box>.contact .contact-line>div>.call .call-time{
+    display: inline;
+}
+
+.wrapper>main>.box>.report{
+    height: auto;
+    max-width: 480px;
+}
+.wrapper>main>.box>.report>.safety{
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper>main>.box>.report>.safety>.safety2>p{
+    line-height: 1px;
+}
+
+footer{
+    text-align: center;
+}
+
+footer>.f-section1{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.f-logo-right{
+    margin: 0 20px;
+    padding: 0;
+    top: 0;
+    position: absolute;
+}
+
+.f-logo{
+    position: absolute;
+    top:80px
+}
+footer>.f-section2{
+    margin-top: 100px;
+}
+
+footer>.f-section3{
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer>.f-section3>.f-section3-right{
+    margin: 0 110px;
+}

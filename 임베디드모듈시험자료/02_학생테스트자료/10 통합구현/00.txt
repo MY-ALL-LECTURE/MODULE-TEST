@@ -1,0 +1,26 @@
+
+1. ERD 의 설계가 적절한가 (15점)
+Web Application 구성을 위한 테이블의 개수와 내부 속성은 적절한가 5점
+Web Application 구성을 위한 테이블의 관계도는 적절한가 10점
+
+2. MVC2 패턴을 적용한 Controller구성을 하였는가 (20점)
+FrontController에서 요청 URL을 적절히 받을 수 있는가 10점
+SubController에서의 작업단계를 올바르게 지키고 있는가 10점
+
+3. MVC2 패턴을 적용한 Service 구성을 하였는가 (20점)
+Service 와 ServiceImpl로 결합도를 낮추고 있는가 5점 
+Dao와의 연결이 되어 있는가 5점
+트랜잭션 처리가 되어 있는가 10점
+
+4. MVC2 패턴을 적용한 Dao 구성을 하였는가 (20점)
+Dao와 DaoImpl로 결합도를 낮추고 있는가 10점 
+Dto를 적절히 사용하여 CRUD를 하였는가 10점
+
+5. MVC2 패턴을 적용한 Dto 구성을 하였는가 (10점)
+모든 속성은 private으로 처리되어 있는가 5점
+Getter and Setter / Constructor 가 구성되어 있는가 5점
+
+6. View에서 적절한 표현식을 사용하여 메시지 표현을 하였는가 (15점)
+정적 Resource를 적절하게 Mapping 하고 있는가 5점
+HTML 구조가 모든페이지에 일정한 패턴대로 구조화 되어 있는가 5점
+표현식이나 JSTL을 이용한 메시징 처리가 되어있는가 5점

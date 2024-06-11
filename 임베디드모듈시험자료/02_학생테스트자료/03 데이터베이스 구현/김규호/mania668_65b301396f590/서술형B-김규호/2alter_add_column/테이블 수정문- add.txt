@@ -1,0 +1,1 @@
+alter table tbl_student add column gender varchar(1) null;

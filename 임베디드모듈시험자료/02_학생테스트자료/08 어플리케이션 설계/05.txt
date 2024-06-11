@@ -1,0 +1,28 @@
+05조 홍재성 김규호 옥은진 안지윤
+SubController-Service 간 관계선이 적절하지 않습니다 -10
+나머지는 문제 없습니다
+고생하셨습니다.
+
+Persistence Layer 의 CRUD 속성/함수의 헤더는 적절한가 (20점)
+- 조회 함수는 적절한가 (5점)
+- 삽입 함수는 적절한가 (5점)
+- 수정 함수는 적절한가 (5점)
+- 삭제 함수는 적절한가 (5점)
+ 
+Presentation Layer 의 함수의 헤더는 적절한가 (20점)
+- 반환 자료형은 적절한가(10점)
+- 파라미터는 적절한가(10점)
+
+Business Layer 의 함수의 헤더는 적절한가 (20점)
+- 반환 자료형은 적절한가(10점)
+- 파라미터는 적절한가(10점)
+
+Persistence Layer 의 클래스 관계선은 적절한가 (10점)
+
+Presentation Layer 의 클래스 관계선은 적절한가 (10점)
+- View 와 FrontController와의 관계선은 적절한가(5점)
+- FrontController와 SubController와의 관계선은 적절한가(5점)
+
+Business Layer 의 클래스 관계선은 적절한가 (0점)-10
+
+핵심 Business 로직은 적절한가 (10점)

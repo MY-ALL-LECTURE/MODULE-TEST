@@ -1,0 +1,6 @@
+[root계정 접속] mysql -u root -p
+
+
+[계정추가] create user user1234@'%' identified by '1234';
+
+[DB생성] create database testdb;

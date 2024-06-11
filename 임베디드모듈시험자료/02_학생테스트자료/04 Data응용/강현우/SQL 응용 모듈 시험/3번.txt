@@ -1,0 +1,10 @@
+-- 3번--
+
+select
+    tbl_lecture.lec_name,
+    SUM(if(tbl_current_lecture.lec_time='09:00 - 12:00', 1, 0)) as '09:00 - 12:00',
+    SUM(if(tbl_current_lecture.lec_time='13:00 - 15:00', 1, 0)) as '13:00 - 15:00',
+    SUM(if(tbl_current_lecture.lec_time='15:00 - 17:00', 1, 0)) as '15:00 - 17:00'
+from tbl_current_lecture
+inner join tbl_lecture on tbl_current_lecture.lec_code = tbl_lecture.lec_code
+group by tbl_lecture.lec_name with rollup;

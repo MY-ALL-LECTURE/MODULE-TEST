@@ -1,0 +1,97 @@
+1.
+select  CL.no, CL.lec_duration, CL.lec_time, T.t_name, L.lec_name, CL.class_no
+from tbl_current_lecture CL, tbl_teacher T, tbl_classroom C, tbl_lecture L
+where CL.t_id = T.t_id
+	and CL.class_no = C.class_no
+    and CL.lec_code = L.lec_code;
+
+
+2.
+create view view_current_lecture as
+select  CL.no, CL.lec_duration, CL.lec_time, T.t_name, L.lec_name, CL.class_no
+from tbl_current_lecture CL, tbl_teacher T, tbl_classroom C, tbl_lecture L
+where CL.t_id = T.t_id
+	and CL.class_no = C.class_no
+    	and CL.lec_code = L.lec_code;
+
+3.
+select L.lec_name,
+	sum(if(CL.lec_time='09:00 - 12:00', 1, 0)) as '09:00 - 12:00',
+    sum(if(CL.lec_time='13:00 - 15:00', 1, 0)) as '13:00 - 15:00',
+    sum(if(CL.lec_time='15:00 - 17:00', 1, 0)) as '15:00 - 17:00'
+from tbl_lecture L, tbl_current_lecture CL
+where L.lec_code = CL.lec_code
+group by L.lec_name with rollup;
+
+4.
+delimiter $$
+create procedure proc_insert_tbl_registration(in sid varchar(45), in lcode int, lduration varchar(100))
+begin
+	declare error_code int;
+    declare error_message text;
+	declare continue handler for SQLEXCEPTION
+    begin
+		show errors;
+		get DIAGNOSTICS CONDITION 1
+			error_code = MYSQL_ERRNO,
+		error_message = MESSAGE_TEXT;
+        insert into tbl_errlog values(null, error_code, now(), error_message);
+	end;
+    
+    start transaction;
+		insert into tbl_registration values(sid, lcode, lduration);
+	commit;
+end $$
+delimiter ;
+
+5.
+delimiter $$
+create trigger tbl_student_update_trg
+after update 
+on tbl_student 
+for each row
+begin
+	insert into tbl_student_bak values(
+		old.s_id, old.s_name, old.s_phone, now(), null
+	);
+end $$
+delimiter ;
+
+6.
+delimiter $$
+create trigger tbl_teacher_update_trg
+after update 
+on tbl_teacher
+for each row
+begin
+	insert into tbl_teacher_bak values(
+		old.t_id, old.t_name, old.t_phone, old.t_addr, now(), null
+	);
+end $$
+delimiter ;
+
+7.
+delimiter $$
+create trigger tbl_student_delete_trg
+after delete 
+on tbl_student
+for each row
+begin
+	insert into tbl_student_bak values(
+		old.s_id, old.s_name, old.s_phone, null, now()
+	);
+end $$
+delimiter ;
+
+8.
+delimiter $$
+create trigger tbl_teacher_delete_trg
+after delete 
+on tbl_teacher
+for each row
+begin
+	insert into tbl_teacher_bak values(
+		old.t_id, old.t_name, old.t_phone, old.t_addr, null, now()
+	);
+end $$
+delimiter ;

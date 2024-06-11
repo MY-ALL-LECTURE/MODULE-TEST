@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    width:100%;
+}
+
+.login-wrapper{
+    margin: 0;
+    width: 100%;
+}
+
+/* main */
+.login-wrapper>.login-main>section{
+    /* border:1px solid; */
+    position: absolute;
+    left:0; top: 27vh;
+    height: 400px;
+    
+    /* display: flex; */
+}
+/* login-box */
+.login-wrapper>.login-main>section>div{
+    width: 24.6vw; height:200px;
+    /* border:1px solid; */
+    position: absolute;
+    top : 1vh; left: 20vw;
+}
+.login-wrapper>.login-main>section>div>.login-box{
+    width: 25.5vw;
+    position: inherit;
+    right:0; 
+}
+.login-wrapper>.login-main>section>div>.login-box>form input{
+    width: 15.64vw;height:3vh;
+    background-color: white;
+    opacity: .8;
+}
+.login-wrapper>.login-main>section>div>.login-box>form a{
+    display: block;
+    width: 7.8vw; height: 7.5vh;
+    text-align: center;
+    line-height: 7.5vh;
+    font-size: .8rem;
+}
+.login-wrapper>.login-main>section>div>.login-box>.middel>div{
+    font-size: .7rem;
+}
+.login-wrapper>.login-main>section>div>.login-box>.bottom a{
+    display: block;
+    width: 25.41vw; height: 4vh;
+    text-align: center;
+    line-height: 4vh;
+    /* margin: 10px 0; */
+    font-size: .7rem;
+} 
+/* guide */
+.login-wrapper>.login-main>section>.guide{
+    width: 39vw; height: 30vh;
+    position:inherit;
+    left: auto; right:0; top:1vh;
+    /* width:100%; */
+    display: block;
+}
+.login-wrapper>.login-main>section>.guide>div{
+    width: 14vw; height: 10vh;
+    position: relative;
+}
+.login-wrapper>.login-main>section>.guide a{
+    display: block;
+    width: 100%; height: 100%;
+    /* width: 14vw; height:10vh; */
+    font-size: .7rem;
+    text-align: center;
+    line-height: 2vh;
+}
+.login-wrapper>.login-main>section>.guide span:nth-child(1){
+    display: block;
+    text-align: center;
+    height:50px;
+    font-size: 2rem;
+    line-height: 8vh;
+}
+.login-wrapper>.login-main>section>.guide span:nth-child(2){
+    position: absolute;
+    left: 0; bottom: 0 !important;
+    width: 100% !important;
+}
+
+
+/* footer */
+.login-wrapper>.login-main>footer>div{
+    position: absolute;
+    right: 10vw; left: auto;
+}
+.login-wrapper>.login-main>footer>div>a{
+    font-size: .7rem;
+}

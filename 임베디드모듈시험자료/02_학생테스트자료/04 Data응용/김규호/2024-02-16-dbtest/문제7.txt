@@ -1,0 +1,15 @@
+-- 문제 7
+delimiter $$
+create trigger tbl_student_delete_trg
+before delete
+on tbl_student
+for each row
+begin
+	insert into tbl_student_bak values(
+    old.s_id, old.s_name, old.s_phone, null, now()
+    );
+end $$
+delimiter ;
+
+delete from tbl_student where s_id='20191234';
+select * from tbl_student_bak;

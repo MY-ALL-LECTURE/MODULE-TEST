@@ -1,0 +1,23 @@
+1. tbl_student 테이블 create하기
+   : create table tbl_student(
+      id int primary key,
+      name varchar(45) null,
+      addr varchar(45) null,
+      phone varchar(45) null);
+
+2. gender 열 추가하기
+   : alter table tbl_student add column gender varcahr(1) null after phone;
+
+3. phone 열 삭제하기
+   : alter table tbl_student drop column phone;
+
+4. insert 명령문으로 내용 삽입하기
+   : insert into testdb.tbl_student value('1', '홍길동', '대구', 'M');
+     insert into testdb.tbl_student value('2', '기명이', '울산', 'M');
+     insert into testdb.tbl_student value('3', '김미녀', '인천', 'W');
+
+5. update 명령문으로 값 변경하기
+   : update testdb.tbl_student set addr='창원' where='3';
+
+6. delete 명령문으로 값 삭제하기
+   : delete from testdb.tbl_student where id='2'; 

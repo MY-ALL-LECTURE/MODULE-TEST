@@ -1,0 +1,33 @@
+-- 문제4 
+alter table tbl_errlog modify `no` int auto_increment;
+drop procedure  proc_insert_tbl_registration;
+DELIMITER $$
+CREATE PROCEDURE proc_insert_tbl_registration(
+    IN sid VARCHAR(45),
+    IN lcode INT,
+    IN lduration VARCHAR(100)
+)
+BEGIN
+    DECLARE error_code INT;
+    DECLARE error_message VARCHAR(255);
+
+    DECLARE CONTINUE HANDLER FOR 1452
+    BEGIN
+        GET DIAGNOSTICS CONDITION 1
+            error_code = MYSQL_ERRNO,
+            error_message = MESSAGE_TEXT;
+        INSERT INTO tbl_errlog VALUES (null, error_code, NOW(), error_message);
+    END;
+    INSERT INTO tbl_registration VALUES (sid, lcode, lduration);
+END$$
+DELIMITER ;
+
+call proc_insert_tbl_registration('20190001', 1001, '2023-05-22 - 2023-06-21');
+
+call proc_insert_tbl_registration('20190001', 1001, '2023-05-22 - 2023-06-21');
+
+call proc_insert_tbl_registration('20190001', 7001, '2023-05-22 - 2023-06-21');
+
+call proc_insert_tbl_registration('70190001', 1001, '2023-05-22 - 2023-06-21');
+
+select * from tbl_errlog;

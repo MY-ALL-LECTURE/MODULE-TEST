@@ -1,0 +1,39 @@
+CREATE TABLE `user` (
+  `userId` varchar(45) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `phoneNumber` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `role` varchar(45) NOT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `bussinessman` (
+  `bussinessManId` varchar(45) NOT NULL,
+  `userId` varchar(45) NOT NULL,
+  PRIMARY KEY (`bussinessManId`),
+  KEY `BussinessMan_userId_FK_idx` (`userId`),
+  CONSTRAINT `BussinessMan_userId_FK` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `session` (
+  `sessionId` int NOT NULL AUTO_INCREMENT,
+  `userId` varchar(45) NOT NULL,
+  `role` varchar(45) NOT NULL,
+  PRIMARY KEY (`sessionId`),
+  KEY `Session_userId_FK_idx` (`userId`),
+  CONSTRAINT `Session_userId_FK` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `item` (
+  `itemId` int NOT NULL AUTO_INCREMENT,
+  `bussinessManId` varchar(45) NOT NULL,
+  `itemName` varchar(100) NOT NULL,
+  `itemType` varchar(45) NOT NULL,
+  `itemPrice` int NOT NULL,
+  `itemCount` varchar(45) NOT NULL,
+  `itemManufacturingDate` date DEFAULT NULL,
+  PRIMARY KEY (`itemId`),
+  KEY `Item_BussinessManId_FK_idx` (`bussinessManId`),
+  CONSTRAINT `Item_BussinessManId_FK` FOREIGN KEY (`bussinessManId`) REFERENCES `bussinessman` (`bussinessManId`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

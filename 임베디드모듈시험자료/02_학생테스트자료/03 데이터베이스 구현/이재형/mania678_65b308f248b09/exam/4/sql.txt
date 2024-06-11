@@ -1,0 +1,94 @@
+mysql -uroot -p
+Enter password: ****
+
+use mysql
+Database changed
+mysql> create user user1234@'%';
+
+select user, host from user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| user1234         | %         |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+
+create table tbl_student(
+    -> id int primary key,
+    -> name varchar(45),
+    -> addr varchar(45),
+    -> phone varchar(45));
+
+show tables;
++------------------+
+| Tables_in_testdb |
++------------------+
+| tbl_student      |
++------------------+
+
+desc tbl_student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | NO   | PRI | NULL    |       |
+| name  | varchar(45) | YES  |     | NULL    |       |
+| addr  | varchar(45) | YES  |     | NULL    |       |
+| phone | varchar(45) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+
+alter table tbl_student add gender varchar(1) null;
+
+desc tbl_student;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | NO   | PRI | NULL    |       |
+| name   | varchar(45) | YES  |     | NULL    |       |
+| addr   | varchar(45) | YES  |     | NULL    |       |
+| phone  | varchar(45) | YES  |     | NULL    |       |
+| gender | varchar(1)  | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+alter table tbl_student drop phone;
+
+desc tbl_student;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | NO   | PRI | NULL    |       |
+| name   | varchar(45) | YES  |     | NULL    |       |
+| addr   | varchar(45) | YES  |     | NULL    |       |
+| gender | varchar(1)  | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+insert into tbl_student values(1, '홍길동', '대구', 'M');
+Query OK, 1 row affected (0.01 sec)
+
+insert into tbl_student values(2, '기명이', '울산', 'M');
+Query OK, 1 row affected (0.00 sec)
+
+insert into tbl_student values(3, '김미녀', '인천', 'W');
+Query OK, 1 row affected (0.00 sec)
+
+select * from tbl_student;
++----+--------+------+--------+
+| id | name   | addr | gender |
++----+--------+------+--------+
+|  1 | 홍길동 | 대구 | M      |
+|  2 | 기명이 | 울산 | M      |
+|  3 | 김미녀 | 인천 | W      |
++----+--------+------+--------+
+
+delete from examdb.tbl_student where (id=2);
+
+select * from tbl_student;
++----+--------+------+--------+
+| id | name   | addr | gender |
++----+--------+------+--------+
+|  1 | 홍길동 | 대구 | M      |
+|  3 | 김미녀 | 창원 | W      |
++----+--------+------+--------+
+

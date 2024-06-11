@@ -1,0 +1,314 @@
+
+*{
+    box-sizing: border-box;
+    margin : 0px !important;
+    border : 0px !important;
+}
+body{
+    width : 100vw;
+    /* height: 100vh; */
+    margin : 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.wrapper{
+    width : 380px;
+    border : 0px;
+    margin : 0 auto;
+}
+.wrapper>header{
+    display:flex;
+    align-items: center;
+    flex-direction: column !important;
+
+}
+
+/* top-header */
+.wrapper>header>.top-header{
+    display: flex;
+    width: 100vw !important;
+    height: 100vh !important;
+    border-bottom: 2px solid green !important;
+}
+.wrapper>header>.top-header>.logo{
+    margin-left: -40px !important;
+}
+.wrapper>header>.top-header>.logo>a{
+}
+.wrapper>header>.top-header>.logo>a>img{
+
+}
+.wrapper>header>.top-header>.login{
+    display: none !important;
+}
+.wrapper>header>.top-header>.login>a{
+    display: none !important;
+}
+
+
+.wrapper>header>nav{}
+.wrapper>header>nav>.menu{
+    display: none !important;
+}
+.wrapper>header>nav>.menu>li{
+    display: none !important;
+}
+.wrapper>header>nav>.menu>li>a{
+    display: none !important;
+}
+.wrapper>header>nav>.menu>li>.submenu{
+    display: none !important;
+}
+
+
+/* main */
+.wrapper>main{
+   background-color: white !important;
+;
+}
+
+/* login */
+.wrapper>main>section{
+    background-color: white !important;
+
+    
+}
+
+section.login{
+    width: 100% !important;
+    height: 100% !important;
+    margin: auto;
+    padding: 120px 10px 40px !important;
+}
+
+
+/* login-title */
+.wrapper>main>section.login>.title{
+    margin: auto;
+    
+}
+.wrapper>main>section.login>.title>h1{
+    position: relative;
+    
+    font-size: 2rem;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: -0.08em;
+    
+}
+.wrapper>main>section.login>.title>p{
+    display: none !important;
+}
+/* login-body */
+.wrapper>main>section.login>.login-body{
+    margin: auto;
+    display: flex;
+    width: 100% !important;
+    height: 100%;
+    position: relative;
+    padding: 30px 5px 10px;
+}
+.wrapper>main>section.login>.login-body>form{
+    position: relative;
+}
+
+.wrapper>main>section.login>.login-body>form>div{
+    margin-bottom: 20px;
+    display: block;
+
+    position: relative;
+
+}
+.wrapper>main>section.login>.login-body>form>div.id{
+    float: left;
+
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    text-align: center !important;
+    justify-content: left !important;
+    align-items: flex-start;
+}
+
+.wrapper>main>section.login>.login-body>form>div.password{
+    float: left;
+    margin-top: 20px;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    justify-content: left !important;
+
+
+}
+.wrapper>main>section.login>.login-body>form>div>*{
+    height:50px;
+
+}
+.wrapper>main>section.login>.login-body>form input{
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    position: relative;
+    
+    
+}
+.wrapper>main>section.login>.login-body>form>.id>input.form-control{
+    /* margin-left: 20px; */
+    border: none;
+    width: auto;
+    padding-left: 20px;
+}
+.wrapper>main>section.login>.login-body>form>.password>input.form-control{
+    /* margin-left: 35px; */
+    border: none;
+    width: auto;
+    padding-left: 40px;
+    
+}
+.form-control:focus{
+    transition: .1s;
+    outline: none;
+}
+
+.wrapper>main>section.login>.login-body>form button>a{
+    color:white;
+    text-decoration: none;
+}
+
+/* login-option */
+.wrapper>main>section.login>.login-option{
+    position: relative;
+    width: 100%;
+    /* height: 20%; */
+    padding: 0px 20px 0px;
+    
+}
+.wrapper>main>section.login>.login-option>.form-check{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    position: relative;
+    
+}
+.wrapper>main>section.login>.login-option>.form-check>input[type="radio"]{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px solid lightgray !important;
+    cursor: pointer;
+    border-radius: 50%;
+    /* margin-top: 10px; */
+}
+.wrapper>main>section.login>.login-option>.form-check>input[type="radio"]:checked{
+    background-color: green;
+    border: 5px solid white !important;
+    box-shadow: 0 0 0 1px #a9a9a9;
+}
+.wrapper>main>section.login>.login-option>.form-check>.form-check-label{
+    position: relative;
+    top: -7px;
+    color: #646464;
+}
+
+/* btn */
+
+.btn{
+    border: none;
+    background-color: rgb(0, 167, 0);
+    width: 250px !important;
+    height: 70px;
+    position: relative;
+    margin: auto !important;
+    display: block;
+}
+.btn>a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+/* login-footer */
+.wrapper>main>section.login>.login-footer{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    margin: auto !important;
+
+}
+.wrapper>main>section.login>.login-footer>ul{
+    position: absolute;
+    width: 250px;
+    list-style: none;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 40px;
+
+}
+.wrapper>main>section.login>.login-footer>ul>li{
+    float: left;
+    line-height: 25px;
+    padding-bottom: 10px;
+
+}
+.wrapper>main>section.login>.login-footer>ul>li::before{
+    margin-left: auto !important;
+    /* margin-right: 20px; */
+    content: '| ';
+    color: lightgray;
+}
+.wrapper>main>section.login>.login-footer>ul>li::after{
+    /* margin-left: 5px; */
+    /* margin-right: 5px; */
+    content: ' ' !important;
+    /* color: lightgray; */
+    
+}
+
+.wrapper>main>section.login>.login-footer>ul>li>a{
+    color: rgb(172, 171, 171);
+    font-weight: bold;
+    line-height: 25px;
+    /* float: left; */
+
+}
+.wrapper>main>section.login>.login-footer>ul>li>a:nth-child(1){
+    margin-right: 10px;
+}
+
+
+/* footer */
+.wrapper>footer{
+    display: none !important;
+}
+
+.wrapper>footer>.footer-info{
+    display: none !important;
+}
+.wrapper>footer>.footer-info>.footer-link>a{
+    display: none !important;
+}
+.wrapper>footer>.footer-info>.footer-link>a1{
+    display: none !important;
+}
+.wrapper>footer>.footer-info>hr{
+    display: none !important;
+}
+.wrapper>footer>.footer-info>.footer-link{
+    display: none !important; 
+}
+.wrapper>footer>.footer-info>.footer-adr>div{
+    display: none !important;
+}
+.wrapper>footer>.footer-info>.footer-adr>div>span{
+    display: none !important;
+}
+.wrapper>footer>.footer-info>.footer-adr>div>img:nth-child(1){
+    display: none !important;
+}
+.wrapper>footer>.footer-info>.footer-adr>div>img:nth-child(2){
+    display: none !important;
+}

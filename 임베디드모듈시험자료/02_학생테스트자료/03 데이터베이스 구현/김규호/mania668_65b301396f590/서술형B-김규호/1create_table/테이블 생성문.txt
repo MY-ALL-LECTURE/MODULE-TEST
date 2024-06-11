@@ -1,0 +1,5 @@
+create table tbl_student(
+    -> id int primary key,
+    -> name varchar(45),
+    -> addr varchar(45),
+    -> phone varchar(45));

@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4XR 클론코딩</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+  <link href="css/4xr.css" rel="stylesheet">
+</head>
+<body id="body">
+<a href="#" class="banner">
+  <img src="./resources/img/banner_bar.jpg" alt="banner" class="banner">
+</a>
+<header id="header">
+  <a href="#" class="logo-wrapper">
+    <img src="./resources/img/logo.png" alt="4XR" class="logo">
+  </a>
+  <ul class="menu">
+    <li class="item">
+      <a href="#" class="link">랭킹</a>
+      <ul class="submenu">
+        <li class="item">
+          <a class="link" href="#">전체</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">브랜드 별</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">검색어 별</a>
+        </li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="#" class="link">상품</a>
+      <ul class="submenu">
+        <li class="item">
+          <a class="link" href="#">전체</a>
+        </li>
+        <li class="item new">
+          <a class="link" href="#">신상품</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">직배송</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">티셔츠/후디</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">아우터</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">니트</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">셔츠</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">팬츠</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">진</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">스포츠</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">수프</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">신발</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">가방</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">액세서리</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">벨트</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">언더웨어</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">뷰티</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">라이프</a>
+        </li>
+        <li class="item k_adult">
+          <a class="link" href="#">키덜트</a>
+        </li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="#" class="link">셀렉샵</a>
+      <ul class="submenu">
+        <li class="item">
+          <a class="link" href="#">전체</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">랭킹</a>
+        </li>
+        <li class="item new">
+          <a class="link" href="#">신상품</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">티셔츠/후디</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">아우터</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">니트</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">셔츠</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">팬츠</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">진</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">수트</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">액세서리</a>
+        </li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="#" class="link">매거진</a>
+      <ul class="submenu">
+        <li class="item">
+          <a class="link" href="#">브랜드</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">콘텐츠</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">쇼케이스</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">룩북</a>
+        </li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="#" class="link">스타일 룸</a>
+      <ul class="submenu">
+        <li class="item">
+          <a class="link" href="#">스타일링</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">체험단모집</a>
+        </li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="#" class="link">이벤트/세일</a>
+      <ul class="submenu">
+        <li class="item">
+          <a class="link" href="#">기본세일</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">타임세일</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">클리어런스</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">기획세일</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">쿠폰</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">랜덤이벤트</a>
+        </li>
+      </ul>
+    </li>
+    <li class="item market">
+      <a href="#" class="link">매장안내</a>
+      <ul class="submenu">
+        <li class="item">
+          <a class="link" href="#">서울성수점</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">인천점</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">수원점</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">대전점</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">일산점</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#">청주점</a>
+        </li>
+      </ul>
+    </li>
+    <li class="item cola">
+      <a href="#" class="link">코카-콜라</a>
+    </li>
+  </ul>
+  <div class="spring"></div>
+<ul class="submenu">
+  <li class="item">
+    <a href="#" class="link">
+      <img src="./resources/img/search.png" alt="" class="icon">
+    </a>
+  </li>
+  <li class="item">
+    <a href="#" class="link">
+      <img src="./resources/img/heart.png" alt="" class="icon">
+    </a>
+  </li>
+  <li class="item">
+    <a href="#" class="link">
+      <img src="./resources/img/cart.png" alt="" class="icon">
+    </a>
+  </li>
+  <li class="item">
+    <a href="#" class="link">
+      <img src="./resources/img/people.png" alt="" class="icon">
+    </a>
+  </li>
+</ul>
+</header>
+<section class="main_big_banner">
+  <a class="menu" href="#">
+  <span class="main_text">
+    셀렉샵의 가을맞이코디
+  </span>
+  </a>
+  <img src="./resources/img/fall_cloth_banner.webp" alt="" class="banner">
+</section>
+<section class="main_content">
+  <h2 class="BEST">
+    BEST
+  </h2>
+  <b>
+    이번주 가장 잘나가는 상품
+  </b>
+  <ul class="item-container">
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/645988/1686730286_0.gif" alt="">
+      </a>
+        <h2 class="name">컨셉비 SMART</h2>
+        <div class="delivery"></div>
+        <h3 class="sub_text">테이퍼드 사이드 밴딩 슬랙스 블랙</h3>
+        <div class="size">34 - 42</div>
+        <div class="price">39,000원</div>
+        </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/653835/thumbnail_1695626905_0.webp" alt="">
+      </a>
+      <h2 class="name">리기드하우스</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">16s extreme banding pants 카키</h3>
+      <div class="size">2XL - 5XL</div>
+      <div class="price">39,500원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/651855/thumbnail_1693384547_0.webp" alt="">
+      </a>
+      <h2 class="name">버닝카포네</h2>
+      <div class="delivery">10/20 배송</div>
+      <h3 class="sub_text">BC Nylon B.CPNE Half Zip-Up Windbreaker 블랙</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">49,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/633007/thumbnail_1662371073_0.webp" alt="">
+      </a>
+      <h2 class="name">컨셉비 SMART</h2>
+      <div class="delivery">10/11 배송</div>
+      <h3 class="sub_text">에센셜 세미 와이드 스웨트 팬츠 블랙</h3>
+      <div class="size">2XL - 5XL</div>
+      <div class="price">29,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/654045/thumbnail_1694676117_0.webp" alt="">
+      </a>
+      <h2 class="name">러기드하우스</h2>
+      <div class="delivery">10/16 배송</div>
+      <h3 class="sub_text">RHS 자수 오버핏 가디건 멜란지그레이</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">55,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/649478/thumbnail_1692260468_0.webp" alt="">
+      </a>
+      <h2 class="name">러기드하우스</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">이지 와이드 데님 팬츠 그리니시</h3>
+      <div class="size">34 - 42</div>
+      <div class="price">54,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/650808/thumbnail_1691996207_0.webp" alt="">
+      </a>
+      <h2 class="name">러기드하우스</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">유틸리티 와이드 카고 팬츠 블랙</h3>
+      <div class="size">2XL - 5XL</div>
+      <div class="price">49,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/652717/thumbnail_1694421648_0.webp" alt="">
+      </a>
+      <h2 class="name">코카-콜라</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">[빅사이즈]Retro Block Windbreaker다크그린</h3>
+      <div class="size">FREE - 4XL~5XL</div>
+      <div class="price">135,000원</div>
+    </li>
+      </ul>
+  <h2 class="BEST">
+    NEW ITEM
+  </h2>
+  <b>
+    신상 모아보기
+  </b>
+  <ul class="item-container">
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/652827/thumbnail_1695711174_0.webp" alt="">
+      </a>
+      <h2 class="name">버닝 카포네</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">BC Uniform Jersey Long-sleeved T-shirt 화이트</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">55,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/652716/thumbnail_1694411748_0.webp" alt="">
+      </a>
+      <h2 class="name">코카-콜라</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">[빅사이즈]Retro Line Windbreaker 레드</h3>
+      <div class="size">FREE - 4XL~5XL</div>
+      <div class="price">135,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/654496/thumbnail_1694508324_0.webp" alt="">
+      </a>
+      <h2 class="name">뉴오브</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">피그먼트 워싱턴 맨투맨 블루</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">55,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/654746/thumbnail_1695783596_0.webp" alt="">
+      </a>
+      <h2 class="name">러기드하우스</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">젠틀 스트라이프 울 자켓 브라운</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">120,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/655431/thumbnail_1695340885_0.webp" alt="">
+      </a>
+      <h2 class="name">알파인더스트리</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">CWU 45/P 플라이트 자켓 SAGE</h3>
+      <div class="size">2XL - 3XL</div>
+      <div class="price">289,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/653512/thumbnail_1695700753_0.webp" alt="">
+      </a>
+      <h2 class="name">헨릭207061</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">헨릭 스몰 로고 바람막이 코발트블루</h3>
+      <div class="size">FREE -4XL~5XL</div>
+      <div class="price">87,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/654826/thumbnail_1693900336_0.webp" alt="">
+      </a>
+      <h2 class="name">안드라</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">A 심볼 단가라 티셔츠 블랙</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">22,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/653023/thumbnail_1695628863_0.webp" alt="">
+      </a>
+      <h2 class="name">뉴오브</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">와펜 꽈배기 니트 카멜</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">65,000원</div>
+    </li>
+  </ul>
+  <h2 class="BEST">
+    가을 패션의 핵심
+  </h2>
+  <b>
+    셀렉샵
+  </b>
+  <ul class="item-container">
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/655548/thumbnail_1694406254_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">고프코어 점퍼 3컬러</h3>
+      <div class="size">XL - 3XL</div>
+      <div class="price">95,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/655540/thumbnail_1694160148_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">1923 맨투맨 2컬러</h3>
+      <div class="size">2XL - 5XL</div>
+      <div class="price">36,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/655556/thumbnail_1694415194_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">가먼트다잉 밴딩 면팬츠 4컬러</h3>
+      <div class="size">L - 3XL</div>
+      <div class="price">35,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/654055/thumbnail_1692769845_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">미니멀 분또 긴팔 티셔츠 2컬러</h3>
+      <div class="size">XL - 3XL</div>
+      <div class="price">29,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/654054/thumbnail_1692604425_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">센트 후드 항공점퍼 2컬러</h3>
+      <div class="size">XL~2XL - 3XL~4XL</div>
+      <div class="price">95,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/654050/thumbnail_1692690001_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">데일리 골지 니트 맨투맨 3컬러</h3>
+      <div class="size">XL~2XL - 3XL~4XL</div>
+      <div class="price">35,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/644280/thumbnail_1675840848_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">보스턴 오버핏 패딩 아노락 2컬러</h3>
+      <div class="size">2XL~3XL - 4XL~5XL</div>
+      <div class="price">99,000원</div>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/goods/639283/thumbnail_1675906168_0.webp" alt="">
+      </a>
+      <h2 class="name">셀렉샵</h2>
+      <div class="delivery"></div>
+      <h3 class="sub_text">603 테리 가디건 3컬러</h3>
+      <div class="size">2XL - 3XL</div>
+      <div class="price">39,000원</div>
+    </li>
+  </ul>
+  <h2 class="STYLING">
+    STYLING
+  </h2>
+  <b class="styling">
+    #스타일링 #요즘코디 #2024스타일 #빅사이즈다모여라 #남자코디 #신상코디
+  </b>
+  <ul class="item-container_S">
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/board_img_goods/10024896/1694166021_0.jpg" alt="">
+      </a>
+      <h2 class="name">자 오늘은 수비연습. 얘들아 한국시리즈는 가야지?</h2>
+      <h3 class="sub_text">그린 후드와 블랙 팬츠를 조합한 데일리 스타일링<br><br>
+        착용 사이즈 : 상의 4XL~5XL / 하의 5XL<br>
+        스타일리스트 : SCENE
+      </h3>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/board_img_goods/10024770/1693814173_0.jpg" alt="">
+      </a>
+      <h2 class="name">뉴트로 댄싱킹 무브</h2>
+      <h3 class="sub_text">와이드한 핏의 데님자켓과 와이드한 핏의 데님팬츠를 매치한 연청 컬러감이 돋보이는 청청 스타일링<br><br>
+        착용 사이즈 : 상의 2XL / 하의 34<br>
+        스타일리스트 : pilyeye
+      </h3>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/board_img_goods/10024684/1693302593_0.jpg" alt="">
+      </a>
+      <h2 class="name">운동!운동!운동을 해야 돼! 헬창 될거야!</h2>
+      <h3 class="sub_text">가을 신상 맨투맨과 흑청 데님 팬츠로 완성한 캐주얼 스타일링<br><br>
+        착용 사이즈 : 상의 2XL~3XL / 하의 36<br>
+        스타일리스트 : TTAE_O
+      </h3>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/board_img_goods/10024778/1693814490_0.jpg" alt="">
+      </a>
+      <h2 class="name">캐주얼한 아웃핏</h2>
+      <h3 class="sub_text">오버핏한 실루엣과 위트있는 아트웍이 돋보이는 스웻셔츠와 일자핏 밴딩팬츠를 매치한 셋업 스타일링<br><br>
+        착용 사이즈 : 상의 2XL~3XL / 하의 2XL<br>
+        스타일리스트 : pilyeye
+      </h3>
+    </li>
+    <li class="item">
+      <a class="link" href="#">
+        <img src="https://cdn-tgreen.bizhost.kr/files/board_img_goods/10024644/1693301348_0.jpg" alt="">
+      </a>
+      <h2 class="name">이건 야구인가..골프인가..골프 처본 적 없음</h2>
+      <h3 class="sub_text">가을 신상 네이비 맨투맨과 스웻 팬츠로 완성한 캐주얼 스타일링<br><br>
+        착용 사이즈 : 상의 2XL~3XL / 하의 2XL<br>
+        스타일리스트 : TTAE_O
+      </h3>
+    </li>
+  </ul>
+<!--  <h2 class="BEST">-->
+<!--    FW ISSUE-->
+<!--  </h2>-->
+<!--  <b>-->
+<!--    진행중인 이벤트 및 할인-->
+<!--  </b>-->
+
+  <footer id="footer">
+    <div class="inner-box">
+      <section class="sec_part">
+          <div class="footer-menu">
+            <span class="not_span">
+              <a href="#">회사소개</a>
+              <a href="#">오프라인 매장안내</a>
+              <a href="#">제휴/입점안내</a>
+            </span>
+            <span>
+              <a href="#">이용약관</a>
+              <a href="#">개인정보처리방침</a>
+              <a href="#">영상정보처리기기 운영ㆍ관리 방침</a>
+              <span>
+                <a href="/center/main.php">고객센터</a>
+              </span>
+            </span>
+          </div>
+          <div class="company-info">
+            대표 : 황보성현,고윤수 | 상호 : (주)티그린 &nbsp;&nbsp;&nbsp; 사업자등록번호 : 201-86-19106     통신판매업 : 2011-서울중구-0149
+            <br>
+            콜센터 : 1599-1916 | 전자우편 :
+            <a href="mailto:4xrcompany@naver.com">4xrcompany@naver.com</a>
+            주소 : 서울특별시 중구 다산로14길 12 (신당동) 티그린
+            <a href="https://ftc.go.kr/www/bizCommList.do?key=232" target="_blank" title="새창으로 열기">[ 사업자정보확인 ]</a>
+            호스팅사업자 : (주)이퀴닉스
+          </div>
+          <div class="footer-txt">
+            <p>
+              일부 상품의 경우 주식회사 티그린은 통신판매의 당사자가 아닌 통신판매중개자로서
+              <br>
+              상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.
+            </p>
+            <p class="escrow_con">
+              당사는 고객님의 안전거래를 위해 관련 법률에 의거하여 NHN KCP의 에스크로서비스를 적용하고 있습니다.
+              <a href="https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=A7G56" onclick="window.open(this.href,'kcp_pop','width=500,height=450')" target="_blank" class="service_confirm_btn">서비스 가입사실 확인<img src="https://cdn-tgreen.bizhost.kr/4xr_footer_20230316/btn_arrow.png"></a>
+              <a href="https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=A7G56" onclick="window.open(this.href,'kcp_pop','width=500,height=450')" target="_blank" class="kcp"><img src="https://cdn-tgreen.bizhost.kr/4xr_footer_20230316/kcp_logo.png"></a>
+              <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2018619106&amp;apv_perm_no=" onclick="window.open(this.href,'kcp_pop','width=500,height=450')" target="_blank" class="ftc"><img src="https://cdn-tgreen.bizhost.kr/4xr_footer_20230316/ftc_logo.png"></a>
+            </p>
+          </div>
+      </section>
+      <section class="sec_part">
+        <p class="cs_center">
+          CS CENTER
+          <span>1599-1916</span>
+        </p>
+        <p class="company-info">
+          평일: AM 09:00 ~ PM 17:00   점심시간 : PM 12:00 ~ PM 13:00   토요일/일요일/공휴일 OFF
+          <br>
+          반품주소지 : 서울시 성북구 숭인로 14, 1층 CJ택배 길음대리점 (주) 티그린 앞 (4XR 자체 배송 상품 물류센터)
+          <br>
+          *타 택배 및 편의점택배 이용시 반송처리 되니 반드시 CJ택배로 발송 부탁드립니다.
+          <br>
+          <b>** 각 브랜드마다 물류센터가 다릅니다. 교환/환불 시 주문 조회 메뉴를 통해 해당 제품이 출고된 곳으로 반송하셔야 합니다.</b>
+        </p>
+      </section>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

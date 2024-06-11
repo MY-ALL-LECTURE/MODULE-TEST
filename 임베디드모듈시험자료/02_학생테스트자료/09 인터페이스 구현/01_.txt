@@ -1,0 +1,38 @@
+[1조] 01조 나재현 김민산 박은호 박정현 이동환
+  
+MemberController에서 MemberServiceImpl로 연결되어있습니다
+인터페이스형으로 바꿔주세요(-10)
+싱글톤 처리되는 Dao 의 생성자가 public 입니다(-10)
+나머지는 문제 없습니다.
+고생하셨습니다
+
+1. Presentation의 Interface 설계는 적절한가 (15점)
+SubController에 대한 Interface 설계는 적절한가 5점
+SubController와 Interface와의 관계선은 적절한가 5점
+FrontController와 Interface와의 관계선은 적절한가 5점
+
+2. Presentation Interface구현은 적절한가(15점)
+Interface클래스를 작성하고 관련 함수선언을 하였는가 5점
+SubController에서 Interface와 상속관계 구현을 하였는가 0점(-5)
+FrontController에서는 적절하가 Interface 사용을 하고 있는가 5점
+
+3. Business Interface 설계는 적절한가(20점)
+Service Interface를 설계하고 함수를 선언하였는가 5점
+기존 Service클래스를 ServiceImple로 명명하고 기존 선언된 함수 정리를 하였는가 5점
+Service Interface와 ServiceImple간의 관계선은 적절한가 5점
+SubController와 Service Inteface와 관계선은 적절한가 5점
+
+4. Business Interface 구현은 적절한가(20점)
+Service Interface를 구현하였는가 0점(-5)
+Service Interface와 ServiceImpl간의 상속관계 처리 하였는가 10점
+SubController에서는 Service Interface를 이용하고 있는가 0점(-5)
+
+5. Persistence Interface 설계는 적절한가(15점)
+Dao의 상위클래스을 설계하였는가 5점
+Dao의 중복되는 코드를 상위클래스로 이전 하였는가 0점(-5)
+Dao와 상위클래스와의 관계선은 적절한가 5점
+
+6. Persistence Interface 구현은 적절한가(15점)
+Dao 상위클래스를 구현하였는가 5점
+Dao를 DaoImpl로 명명하고 상속받는 함수는 제외하였는가 5점
+Service계층에서 Dao상위클래스를 이용하고 있는가 5점

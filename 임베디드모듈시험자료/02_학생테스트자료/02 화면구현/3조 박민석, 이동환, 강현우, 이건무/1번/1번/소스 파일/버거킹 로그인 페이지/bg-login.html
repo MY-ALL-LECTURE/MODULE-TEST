@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/login2.css">
+
+    <link rel="stylesheet" href="./css/common2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <div class="top-header">
+                    <div class="top-hd">
+                        <a href="">브랜드홈</a>
+                        <a href="">로그인</a>
+                        <a href="">고객센터</a>
+                    </div>
+                </div>
+                <div class="nav-1">
+                    <div class="left">
+                        <div class="logo">
+                            <a href="" class="logo1">
+                                <img src="https://i.namu.wiki/i/5IrysxQnQyGWVrB0OSXZE4fjmB1kizS-hg0tTaMAaKG_4ZnMdv_glXV31cpWgeZ2VHyF152gkOWJkoNf5Ge8lg.svg">
+                            </a>
+                            <a href="" class="logo2">
+                                <span>버거킹</span>
+                            </a>
+                        </div>
+                    </div>              
+                    <a href="" class="right">
+                        회원가입
+                    </a>          
+                </div>            
+            <!-- <nav class="nv-123">
+                <div class="nav">
+                    <span>home ></span>
+                    <span>로그인</span>
+                </div>
+            </nav> -->
+        </header>
+        <nav>
+            <div class="nav">
+                <a href="">home ></a>
+                <a href="">로그인</a>
+            </div>
+        </nav>
+        <main>
+            <section class="main-sc">
+                <div class="web">
+                    <div class="login">
+                        <h2>
+                            <em>YOUR WAY</em></br>
+                            <span>어서오세요! 버거킹입니다.</span>
+                        </h2>
+                        <div class="login-box">
+                            <div class="left">
+                                <h3>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEFBNEU4QzdGQzRCMTFFOEI5MUI4NzE2NzRGRTUyOUMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEFBNEU4QzhGQzRCMTFFOEI5MUI4NzE2NzRGRTUyOUMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQUE0RThDNUZDNEIxMUU4QjkxQjg3MTY3NEZFNTI5QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQUE0RThDNkZDNEIxMUU4QjkxQjg3MTY3NEZFNTI5QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pizf/y4AAAQ2SURBVHjavFhtSJRZFD4zjklaiVLm/lALtWJ/qGmZkJK7IxIa6SKK5rJhgRAaCoIFIYhRyCIYyhqi0sLSjmD+qRRJckt/lIGprOIkhqQYCAZOtq6GOT3n8s7g18z7Nc4DD/d9Z+455+He895z7zVUV1eTFgwMDASgOQYeAQNBE2gDP4LWlJSUT6QRJpVCItH8Cp4HT7mzR993aJ6BFgh85XFRCJCApgq8CBoU+j4u8Trsh9HeBTsh0C5naJQRcwBsxuMbMEuFoK04CXaAz+EvSrMoGMeiGQGL5cSrwE/gW/jOVy0KRmzcDx4lz2M/+DdiVCgWhc5n0DwFD9DugdOgDrGuyYpCpwg0T0B/8g7+QMzzLkXhT1b/F3iIvAcRE7FDXY3UFTCFvI+DPJXb1iko3Yvmth7PISEhlJeXR0lJSeJ5cXGRhoeHqb29naanp+XML0FDHdawkY0j9Rv4g1ZBsbGx1NraStnZ2RQaGkpGo5GCg4PJbDZTU1MTpaenK5nGm1un76pWQRy8pqaG/P13/jZ8fX2poqKCIiMj5Vz9gtEKFqLwwGvRaa2icnJyKCAgwPk+OztLnZ2dNDk56fzNx8eHCgoK5FztkaqGyCmznlyKi4tzPttsNiopKaHl5WUymUzU0tJCYWFh4r+YmBgl7n4GH/D0JegRFRgY6Hyen58Xghhra2ti1BzYOJpukODIqSg9omZmZpzP0dHRIqn9/PwoOTmZEhMTd+znBlFIJxNP32E9oqamppzBDQYDVVZWCm5FT0+PEne+XBuNUoHUhLS0NMrPz5ftx+tVV1eX4oLNI7WkRVBGRgaVl5eLNckV7HY79fb2UmNjo8gxhVhmUYtqBWVlZVFpaamYLgf6+/upra2N4uPjKSgoSKzoQ0NDNDc3p8b1Og8Si5pSU/Nyc3OpuLh4k6C+vj6qra2l9fV1tSK24gNKzSqLGlVqUVhYSEVFRdt+X1paElPlAYw6Fs9/lPRmMSzK1XRyOamvr9crrs+xTv0LvpfrvbKysul9fHx8W+JnZmbqEcT59FiIko48f8pZWCwWam5uFiPB25GysjKxM3CAv7Lu7m49ol5Ay4eN57774A1wnzurjo4OGhsbo4mJCfHO4lZXVyk8PJwaGhr0Tt3vzgKemppKERER/6MM8EbvnJzlwsLCpner1UqDg4N6E/wlRqlqp+1wrZLc2gV8BUt23KNDKZf3S1Inb+IGYo+7PGLhzzfSAcLuJUH3EfOe7GEUnR5Kw/ltlwXxce664mM7hPHXyOX/yy6IsUs3MJcR55uqCw4YPJL27q89KIgL4wX4vuXuSsjtbQoMrWjOSnk2rUPMZ/AOeAI+ZVdY2UszOOHl/wG2qZwD2dJNnlluoeVtujTKFvAh/Ng8fr0IpxyEp/QR76Ol68UfpeuifZKv/3g7DvL5ahA2mjaQ3wUYAHqBZELLoSo8AAAAAElFTkSuQmCC" alt=""> 
+                                    <sapn>일반로그인</sapn>
+                                </h3>
+                                <div class="cont">
+                                    <div class="inpbox">
+                                        <input type="text"  placeholder="아이디(이메일)">
+                                    </div>
+                                    <div class="inpbox2">
+                                        <input type="password" placeholder="비밀번호">
+                                    </div>
+                                    <div class="login-option">
+                                        <label class="checkbox">아이디 저장
+                                            <input type="checkbox">
+                                        </label>
+                                        <label class="checkbox"> 자동로그인
+                                            <input type="checkbox">
+                                        </label>
+                                    </div>
+                                    <div class="btn">
+                                        <a href="" class="btn-1">
+                                            <span>로그인
+                                            </span></a>
+                                        <a href="" class="btn-2"><span>회원가입</span></a>
+                                    </div>
+                                    <div class="id-pw">
+                                        <a href=""><span>아이디찾기</span></a>
+                                        <a href=""><span>비밀번호 찾기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h3>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTE2NDkzODkwMzc3MTFFOTk5RDFFRjFEMEQzRUIyMDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTE2NDkzOEEwMzc3MTFFOTk5RDFFRjFEMEQzRUIyMDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMTY0OTM4NzAzNzcxMUU5OTlEMUVGMUQwRDNFQjIwOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMTY0OTM4ODAzNzcxMUU5OTlEMUVGMUQwRDNFQjIwOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpuJpi0AAAMsSURBVHjazJlLiFJhFMe/iQoaZwrEqDY9SDTaRE2hEi2qWbQIRDSJHAoLghhauSioRZsiQqiNDM1GYbDABJvKoLQnUeYiGiLIHkRB7RoqMyhspv+5cyQfN72f19eBH37c63fu3++c+z2OfbOzs6KXbZ7ocZtfagwPDzfrwwAsYDVYwj6/gc/gFfjSrON0Ov1PoKStBSNgF9hc/kNVLAdug8vgSbtDPASugjfgFLA3EEdmBUfBY/AMeEBfqwUuBhdBFjhlHlBlG8EVcAeYWyVwA3gODrfwpdrOo7lXr0By9BCsacMLOggugUCzAm3gBoe3XUapEgRHZAWuAtdBf4emuxDPCJoE0q+aAEs7OB+Xnrn8vxN1mR0E22S8OxwO4Xa7hdVqnZv4cjkRj8dFJpORcWPicI9UKC+txbySLALvwAqtXv1+v/D5fKr3otGoCIfDMiJJzCaeNZSVpDrE+2XE2e12RVyxWBShUEi4XC4FatM1ukejKxnq4/Vy8JCMN4/Ho3yOj4+LRCIh8vm8ArUjkYhyj0IvaS5gVBNIc90WGU8Wi0X5TKVSNfeSyWTFdyRsIa9WNS/JTllP/f1zsxCNWrXRNR07pB0gXD2CQz20DRxSG0Gz1t6Tk5PCYDBU7NsaWaFQEE6nU+sjzKytWD6CyzTvUMvEtanPAl6rK0I82GO7/RqBeT3estms8Hq9CtRugf2sFvhVj7dgMCimp6cVqK3TZkoDVi7wbQ+F9wP4VS1wSo/HQCAgjEajMJlMSlunTalNM/f0eLTZbCIWi7VqBO+qLXUveCfTbaP8u6YmkLY6ES0eaNKVNYk+9zkHVTesY+AYGKjnQWJFaMbO1dtuUZnifBfD+wDcanQmOdulXPwNRrUcmmgG38cdOmmUWi+1HjuzfHjqVPGQcv+C7ME9ykP+p83iJri41FTpY4zrJz/aIIyicwYcqDcIWopBcT6rZFoo7hPYDU40SiOt1SqqlG7lvHyvQ9h3cBqsAze1dJApp83wQYaOaXto568x9EXwiPN5JTgpkzLNlICLHPY496cS8Ho+tg7wNVrXPoLX4KmezXBfr/8N8VeAAQDWJtDHnaHaNgAAAABJRU5ErkJggg==" alt="">
+                                    <span>간편로그인</span>
+                                </h3>
+                                <ul class="list">
+                                    <li class="naver">
+                                        <a href="">                                          
+                                            <span>네이버로그인</span>
+                                        </a>
+                                    </li>
+                                    <li class="kakao">
+                                        <a href="">
+                                            <span>카카오로그인</span>
+                                        </a>
+                                    </li>
+                                    <li class="apple">
+                                        <a href="">
+                                            <span>애플로그인</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sub-sc">
+                <div class="sub">
+                    <div class="sub-coc">
+                        <div class="item">
+                            <ul class="item2">
+                                <li>
+                                    <a href="">
+                                        <span>비회원주문</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span>비회원 주문내역</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item3">
+                            <div class="item4">
+                                <p>회원가입 없이 비회원으로 주문이 가능합니다.</p>
+                            </div>
+                            <div class="btn-c">
+                                <a href="">
+                                    <span>
+                                        비회원주문
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <article>
+                <div class="box">
+                    <div class="ball">
+                        <img src="https://i.namu.wiki/i/5IrysxQnQyGWVrB0OSXZE4fjmB1kizS-hg0tTaMAaKG_4ZnMdv_glXV31cpWgeZ2VHyF152gkOWJkoNf5Ge8lg.svg" alt="">
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="fotter-m1">
+                    <div class="f2">
+                        <div class="story">
+                            <a href="">이용약관</a>
+                            <a href="">개인정보처리지침</a>
+                            <a href="">법적고지</a>
+                        </div>
+                        <div class="f-btn">
+                            <a href="" class="f-btn-1">가맹점모집</a>
+                            <a href="" class="f-btn-2">인재채용</a>
+                        </div>
+                    </div>
+                    <div class="f3">
+                        <h2>
+                            <img src="data:image/png;base64,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" alt="">
+                        </h2>
+                        <p>
+                            서울 종로구 삼봉로 71 G 타워 4F,5F 주식회사 비케이알
+                            <span>
+                                전화번호 1599-0505
+                            </span>
+                        </p>
+                        <p>
+                            사업자 등록번호 101-86-76277
+                            <span>
+                                (주)BKR 대표이사 이동형
+                            </span>
+                        </p>
+                        <p>
+                            Copyright 2019 BKR Co., Ltd. All right Reserved
+                        </p>
+                        <div>
+                            <a href="">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0XE8TsonH3oNXlqLJVPb6ezXvhTHqyJegOg&usqp=CAU" alt="">
+                            </a>
+                            <a href="">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeCOVY_qR2g9WJrL-O_04uShxOvD3-rRNAlQ&usqp=CAU" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

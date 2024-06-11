@@ -1,0 +1,11 @@
+-- 3번 문제 --
+SELECT
+    lec_name,
+    SUM(CASE WHEN lec_time = '09:00 - 12:00' THEN 1 ELSE 0 END) AS '09:00-12:00', -- lec_time이 09:00-12:00을 만족하는 경우 1을 처리 만족하지않는 경우 0을 처리
+    SUM(CASE WHEN lec_time = '13:00 - 15:00' THEN 1 ELSE 0 END) AS '13:00-15:00', -- lec_time이 13:00-15:00을 만족하는 경우 1을 처리 만족하지않는 경우 0을 처리
+    SUM(CASE WHEN lec_time = '15:00 - 17:00' THEN 1 ELSE 0 END) AS '15:00-17:00' -- lec_time이 15:00-17:00을 만족하는 경우 1을 처리 만족하지않는 경우 0을 처리
+FROM
+    view_current_lecture
+GROUP BY
+    lec_name
+WITH ROLLUP;

@@ -1,0 +1,9 @@
+-- 1번
+
+select C.no,C.lec_duration,C.lec_time,T.t_name,L.lec_name,R.class_no
+from tbl_current_lecture C
+inner join tbl_teacher T
+on C.t_id=T.t_id
+inner join tbl_lecture L
+on C.lec_code = L.lec_code
+inner join tbl_classroom R;

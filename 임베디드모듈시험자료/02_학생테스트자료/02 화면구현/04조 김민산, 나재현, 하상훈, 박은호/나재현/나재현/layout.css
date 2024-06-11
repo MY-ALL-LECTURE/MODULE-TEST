@@ -1,0 +1,197 @@
+*{
+    margin: 5px;
+    list-style: none;
+ }
+ 
+    body{}
+    ul{ margin: 0px; padding: 0px; list-style: none;}
+    .material-icons {
+        vertical-align: middle; 
+        font-size: 18px; 
+        margin-left: 5px; 
+        transition: transform 0.3s ease; 
+    }
+    .material-icons:hover {
+        transform: rotate(180deg);
+    }
+    .wrapper{}
+    .wrapper>header{
+
+    }
+    .wrapper>header>.top-header{
+        display: flex;                  
+        background-color: royalblue;
+        color: white;
+        
+    }
+    .wrapper>header>.bottom-header{
+        display: flex;
+    }
+    .wrapper>header>.bottom-header>.left-header{
+        
+    }
+    .wrapper>header>.bottom-header>.left-header>img{}
+    .wrapper>header>.bottom-header>.right-header{
+        margin-left: 50px;
+    }
+    .wrapper>header>.bottom-header>.right-header>nav{
+        position: relative;
+    }
+    
+    .wrapper>header>.bottom-header>.right-header>nav>.menu{
+        display: flex;
+        margin:0px;
+        padding: 0px;
+        width:1500px;
+        justify-content: space-between;
+        
+    
+    }
+    .right-header>nav>.menu>li.open::after{
+
+    }
+  
+    .wrapper>header>.bottom-header>.right-header>nav>.menu>li{          
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin:0px;
+        padding: 0px;
+        width:300px;
+        height: 5vh;
+        list-style: none;           
+    }         
+    .wrapper>header>.bottom-header>.right-header>nav>.menu>li>.submenu{
+        position: absolute;
+        display: none;
+        width: 12.3vw;
+        height: 5vh;
+        line-height: 40px;
+        align-items: center;
+        /* justify-content: center; */
+        background-color: white;
+        z-index: 3;
+
+
+    }
+    .wrapper>header>.bottom-header>.right-header>nav>.menu>li>a{
+        justify-content: center;
+        align-items: center;
+
+
+    }        
+    .wrapper>header>.bottom-header>.right-header>nav>.menu:hover .submenu{
+        display: block;
+
+    }
+    .wrapper>header>.bottom-header>.right-header>nav>ul{    
+    }
+
+    section.main--section{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height:1300px;
+    
+
+
+    }
+
+    section.main--section>aside{
+        flex-grow:2;
+        flex-shrink: 0;
+        flex-basis: 600px;
+        align-self :stretch;
+        text-align: center;
+        justify-content: space-between;
+    }
+    section.main--section>aside>.text1{
+        font-size: 5rem;
+        margin-bottom: 50px;
+        text-decoration: solid;
+    }
+    section.main--section>aside>.text2{
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+    }
+    
+    section.main--section>aside>.text3{
+        border: 5px solid orange;
+        background-color: darkslategrey;
+        color: white;
+        border-radius: 3%;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+    }
+    section.main--section>aside>.button{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    section.main--section>aside>.button>.btn{
+        background-color: darkslategray;
+        border-radius: 5%;
+       
+        color: white;
+        justify-content: center;
+        text-align: center;
+        width: 250px;
+        height: 30px;
+    }
+    section.main--section>aside>.button>.btn:hover{
+        box-shadow: 3px 3px 3px 3px gray;
+
+    }
+    section.main--section>aside>.button>.btn1{
+        background-color: orange;
+        border-radius: 5%;
+  
+        justify-content: center;
+        color: white;
+        width: 250px;
+        height: 30px;
+    }
+    section.main--section>aside>.button>.btn1:hover{
+        box-shadow: 3px 3px 3px 3px gray;
+    }
+
+    
+    section.main--section>article{      
+        flex-grow:2;
+        flex-shrink: 0;
+        flex-basis: 600px;
+        align-self :stretch;  
+
+    }
+    section.main--section>article>div>img{
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    footer>nav>ul.footermenu{
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        position: relative;
+        height: 250px;
+        width: 100%;
+        margin-top: 20px;
+        
+    }
+    footer>nav>ul.footermenu>li{
+     
+        width: 200px;
+
+        
+    }
+    footer>nav>ul.footermenu>li>ul.footersubmenu{}
+
+   
+   

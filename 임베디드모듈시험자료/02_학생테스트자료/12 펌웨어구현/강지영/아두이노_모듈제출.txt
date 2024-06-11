@@ -1,0 +1,17 @@
+const unsigned int led[5] = {2,3,4,5,6};	// led 배열 설정
+
+void setup() {		// 프로그램 실행 시 최초 1번만 실행
+  for(int x=0 ; x<5 ; x++){	// x가 0부터 4까지 반복
+    pinMode(led[x],OUTPUT);	// led[x] 핀을 출력 모드로 설정
+  }
+}
+void loop() {		// 무한반복
+  for(int i=0;i<5;i++){  // i가 0부터 4까지 반복
+      //ALL OFF - 모든 led 끄기
+      for(int x=0;x<=5;x++){	// x가 0부터 5까지 반복
+        digitalWrite(led[x],LOW);	// led[x] 핀을 LOW 상태(끄기)로 설정
+      }  
+      digitalWrite(led[i], HIGH);	// led[I] 핀을 HIGH 상태(켜기)로 설정
+      delay(500);	// 0.5초 대기
+  }
+}

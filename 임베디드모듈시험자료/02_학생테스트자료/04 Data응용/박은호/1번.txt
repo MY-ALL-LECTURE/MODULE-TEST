@@ -1,0 +1,14 @@
+--------------- 1번 문제 ----------------
+SELECT
+    cl.no,
+    cl.lec_duration,
+    cl.lec_time,
+    t.t_name,
+    lec.lec_name,
+    cl.class_no
+FROM
+    tbl_current_lecture cl
+INNER JOIN
+    tbl_lecture lec ON cl.lec_code = lec.lec_code
+INNER JOIN
+    tbl_teacher t ON cl.t_id = t.t_id;

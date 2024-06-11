@@ -1,0 +1,8 @@
+-- 문제3 
+select lec_name,				
+sum(if(lec_time = '09:00 - 12:00',1,0)) as '09:00 - 12:00',
+sum(if(lec_time = '13:00 - 15:00',1,0)) as '13:00 - 15:00',
+sum(if(lec_time = '15:00 - 17:00',1,0)) as '15:00 - 17:00'
+from `view_current_lecture`
+group by lec_name with rollup;
+

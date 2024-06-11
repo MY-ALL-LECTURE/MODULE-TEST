@@ -1,0 +1,134 @@
+1번 문제
+use lmsdb;
+select CL.no, CL.lec_duration, CL.lec_time, T.t_name, L.lec_name, C.class_no
+from tbl_current_lecture CL inner join tbl_classroom C on CL.class_no = C.class_no inner join tbl_lecture L on
+L.lec_code = CL.lec_code inner join tbl_teacher T on T.t_id = CL.t_id;
+
+2번 문제
+create or replace view view_current_lecture
+as 
+select CL.no, CL.lec_duration, CL.lec_time, T.t_name, L.lec_name, C.class_no 
+from tbl_current_lecture CL inner join tbl_classroom C on CL.class_no = C.class_no inner join tbl_lecture L on
+L.lec_code = CL.lec_code inner join tbl_teacher T on T.t_id = CL.t_id;
+
+3번 문제 
+select * from view_current_lecture;
+select lec_name,
+sum(if(lec_time='09:00 - 12:00',1,0)) as '09:00 - 12:00',
+sum(if(lec_time='13:00 - 15:00',1,0)) as '13:00 - 15:00',
+sum(if(lec_time='15:00 - 17:00',1,0)) as '15:00 - 17:00'
+from view_current_lecture group by lec_name with rollup;
+
+4번 문제
+
+delimiter $$
+create procedure proc_insert_tbl_registration(in s_id varchar(45), in lec_code int, in lec_duration varchar(100))
+begin
+    DECLARE error_code VARCHAR(5);
+    DECLARE error_msg VARCHAR(255);
+
+    DECLARE CONTINUE HANDLER FOR 1062
+    begin
+        show errors;
+        get diagnostics condition 1
+            error_code = mysql_errno,
+            error_msg = message_text;
+        INSERT INTO tbl_errlog VALUES(no, error_code, '2024-02-16', error_msg);
+    end;
+
+    DECLARE CONTINUE HANDLER FOR 1452
+    begin
+        show errors;
+        get diagnostics condition 1
+            error_code = mysql_errno,
+            error_msg = message_text;
+        INSERT INTO tbl_errlog VALUES(no, error_code,'2024-02-16', error_msg);
+   
+    end;
+    begin
+        INSERT INTO tbl_registration VALUES(s_id, lec_code, lec_duration);
+    end;
+    select * from tbl_registration;
+end $$
+delimiter ;
+
+call proc_insert_tbl_registration('20190001',1001,'2023-05-22 - 2023-06-21');
+call proc_insert_tbl_registration('20190001',1001,'2023-05-22 - 2023-06-21');
+call proc_insert_tbl_registration('20190001',7001,'2023-05-22 - 2023-06-21');
+call proc_insert_tbl_registration('70190001',1001,'2023-05-22 - 2023-06-21');
+select * from tbl_registration;
+select * from tbl_student;
+select * from tbl_errlog;
+
+5번 문제
+
+delimiter $$
+create trigger tbl_student_update_trg
+after update 
+on tbl_student
+for each row 
+begin
+	insert into tbl_student_bak values(
+		old.s_id, old.s_name, old.s_phone,now(),delete_date
+	);
+end $$
+delimiter ;
+
+insert into tbl_student values('20191234','나나나','010-1234-1234');
+update tbl_student set s_name='우우우' where s_id='20191234';
+select * from tbl_student;
+select * from tbl_student_bak;
+
+6번 문제
+
+delimiter $$
+create trigger tbl_teacher_update_trg
+after update 
+on tbl_teacher
+for each row 
+begin
+	insert into tbl_teacher_bak values(
+		old.t_id, old.t_name, old.t_phone,old.t_addr,now(),delete_date
+	);
+end $$
+delimiter ;
+
+insert into tbl_teacher values(7,'아무개','010-222-333','대구광역시 달서구');
+update tbl_teacher set t_name='아무무' where t_id=7;
+update tbl_teacher set t_phone='010-777-7777' where t_id=7;
+select * from tbl_teacher;
+select * from tbl_teacher_bak;
+
+7번 문제
+
+delimiter $$
+create trigger tbl_student_delete_trg
+after delete
+on tbl_student
+for each row 
+begin
+	insert into tbl_student_bak values(
+		old.s_id, old.s_name, old.s_phone,update_date,now()
+	);
+end $$
+delimiter ;
+delete from tbl_student where s_id='20191234';
+select * from tbl_student_bak;
+
+8번 문제
+
+delimiter $$
+create trigger tbl_teacher_delete_trg
+after delete
+on tbl_teacher 
+for each row 
+begin
+	insert into tbl_teacher_bak values(
+		old.t_id, old.t_name, old.t_phone,t_addr,update_date,now()
+	);
+end $$
+delimiter ;
+
+delete from tbl_teacher where t_id=7;
+select * from tbl_teacher;
+select * from tbl_teacher_bak;

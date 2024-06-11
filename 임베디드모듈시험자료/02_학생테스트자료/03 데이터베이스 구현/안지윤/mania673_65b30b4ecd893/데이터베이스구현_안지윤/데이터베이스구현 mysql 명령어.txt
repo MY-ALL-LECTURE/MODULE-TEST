@@ -1,0 +1,12 @@
+
+1.MYSQLD 명령어로 MYSQL SERVER ROOT로 접속하기
+  : mysql -u root -d
+
+2.user1234 계정 생성하기
+  : create user user1234@'%' identified by '1234';
+
+3.DB생성하기 (DB명 : testdb)
+  : create database testdb;
+
+4.testdb를 export하기
+  : mysqldump -u root -p testdb > testdbexport.sql;

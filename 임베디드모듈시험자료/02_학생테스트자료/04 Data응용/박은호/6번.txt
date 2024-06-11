@@ -1,0 +1,14 @@
+-- 6번 문제 --
+DELIMITER $$
+
+CREATE TRIGGER tbl_teacher_update_trg
+AFTER UPDATE
+ON tbl_teacher
+FOR EACH ROW
+BEGIN
+    INSERT INTO tbl_teacher_bak VALUES (
+        OLD.t_id, OLD.t_name, OLD.t_phone, OLD.t_addr, OLD.update_date, NOW()
+    );
+END $$
+DELIMITER ;
+

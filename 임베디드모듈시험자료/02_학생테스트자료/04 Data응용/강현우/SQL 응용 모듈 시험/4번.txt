@@ -1,0 +1,26 @@
+-- 4번
+
+DELIMITER $$
+
+create procedure proc_insert_tbl_registration(in sid varchar(45), in lcode int, in lduration varchar(100))
+begin
+    declare error_code varchar(5);
+    declare error_message varchar(255);
+
+    declare continue handler for sqlexception
+    begin
+        get diagnostics condition 1
+            error_code = mysql_errno,
+            error_message = message_text;
+        insert into lmsdb.tbl_errlog values (null, error_code, NAW(), error_message);
+    end;
+    insert into tbl_registration values (s_id, lec_code, lec_duration);
+end $$
+DELIMITER ;
+
+call proc_insert_tbl_registration('20190001','1001','2023-05-22 - 2023-06-21');
+call proc_insert_tbl_registration('20190001','1001','2023-05-22 - 2023-06-21');
+call proc_insert_tbl_registration('20190001','7001','2023-05-22 - 2023-06-21');
+call proc_insert_tbl_registration('70190001'
+,'1001','2023-05-22 - 2023-06-21');
+select*from tbl_errlog;

@@ -1,0 +1,411 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.wrapper>main{
+    margin-top: 5vh;
+}
+.wrapper>main>.box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+    min-width: 770px;
+    margin: 0 auto;
+}
+
+.wrapper>main>.box>.contact{
+    height: 960px;
+    margin-bottom: 70px;
+    /* border: 1px solid; */
+    align-items: center;
+    justify-content: center;
+    
+}
+.wrapper>main>.box h3{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.wrapper>main>.box>.contact .contact-line{
+    max-width: 1310px;
+
+    padding: 60px 45px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px 0 rgb(228, 228, 228);
+
+}
+
+.wrapper>main>.box>.contact .contact-line>div{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 770px;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+}
+.wrapper>main>.box>.contact h4{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.wrapper>main>.box>.contact .contact-line>div>.email{
+    height: 300px;
+    cursor: pointer;
+    background-image: url('https://www.bing.co.kr/img/main/sec04_backimg01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 35px;
+    width: 48%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrapper>main>.box>.contact .contact-line>div>.email>p{
+    font-size: 1rem;
+    margin-top: 0;
+}
+.wrapper>main>.box>.contact .contact-line>div>.email>div{
+    width: 160px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: rgba(240, 31, 31, 0.856);
+    text-align: center;
+    line-height: 45px;
+    margin-top: 45px;
+}
+.wrapper>main>.box>.contact .contact-line>div>.email>div>a{
+    color: white;
+    text-decoration: none;
+    padding: 30px 0;
+}
+
+.wrapper>main>.box>.contact .contact-line>div>.call{
+    width: 48%;
+    height: 300px;
+    background-image: url('https://www.bing.co.kr/img/main/sec04_backimg02.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 35px;
+
+
+    padding: 50px;
+}
+.wrapper>main>.box>.contact .contact-line>div>.call>.call-number{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.wrapper>main>.box>.contact .contact-line>div>.call .call-time{
+    color: rgba(240, 31, 31, 0.856);
+    font-weight: 600;
+}
+
+.wrapper>main>.box>.contact .contact-line>.etc{
+    height: 120px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.wrapper>main>.box>.contact .contact-line>.etc>div{
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.wrapper>main>.box>.contact .contact-line>.etc a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.wrapper>main>.box>.contact .contact-line>.etc>div:hover a{
+    background-color: rgba(240, 31, 31, 0.856);
+    color: white;
+    border-radius: 30px;
+}
+
+
+.wrapper>main>.box>.contact .contact-line>ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.wrapper>main>.box>.contact .contact-line>ul>li{
+    width: 49%;
+    height: 80px;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    padding: 0 20px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 80px;
+    border-radius: 30px;
+    justify-content: space-between;
+    cursor: pointer;
+    flex-wrap: wrap;
+
+    box-shadow: inset 0px 5px 10px 0 rgb(228, 228, 228);
+}
+.wrapper>main>.box>.contact .contact-line>ul>li a{
+    display: none;
+}
+.wrapper>main>.box>.contact .contact-line>ul>li:hover{
+    font-weight: 900;
+}
+
+.wrapper>main>.box>.contact .contact-line>ul>li:hover a{
+    display: flex;
+    background-color: rgba(240, 31, 31, 0.856);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
+@keyframes moving{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+.wrapper>main>.box>.report{
+    margin: 0 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.wrapper>main>.box>.report>.safety{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 1310px;
+}
+.wrapper>main>.box>.report>.safety>.safety1,
+.wrapper>main>.box>.report>.safety>.safety2{
+    height: 230px;
+    border-radius: 30px;
+    box-shadow: inset 5px 10px 40px 10px rgb(228, 228, 228);
+    padding: 65px 25px;
+    width: 48%;
+}
+.wrapper>main>.box>.report>.safety p{
+    text-align: center;
+    font-size: 0.8rem;
+    height: 40px;
+    margin: 0;
+}
+.wrapper>main>.box>.report>.safety>.safety2>p{
+    line-height: 40px;
+}
+.wrapper>main>.box>.report>.safety> div div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.wrapper>main>.box>.report>.safety> div div:nth-child(2)>a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: 160px;
+    line-height: 40px;
+    display: block;
+    border-radius: 30px;
+    background-color: rgba(240, 31, 31, 0.856);
+}
+
+
+/* footer */
+.wrapper>footer{
+    width: 100vw;
+    height: 390px;
+    background-color: rgb(14, 14, 14);
+    padding: 30px 50px;
+}
+
+.wrapper>footer>.f-section1{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1920px;
+}
+.wrapper>footer>.f-section1>.f-logo{}
+.wrapper>footer>.f-section1>.f-logo>img{}
+.wrapper>footer>.f-section1>.f-logo-right{
+    display: flex;
+    list-style: none;    
+    /* margin: 0;
+    padding: 0; */
+    text-align: right;
+}
+.wrapper>footer>.f-section1>.f-logo-right>li{
+    margin-left: 20px;
+}
+.wrapper>footer>.f-section1>.f-logo-right>li>a{
+    color: rgb(177, 177, 177);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.wrapper>footer>.f-section2{
+    padding: 30px 0 115px;
+
+}
+.wrapper>footer>.f-section2>ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1920px;
+}
+.wrapper>footer>.f-section2>ul>li{
+    color: rgb(209, 209, 209);
+    font-size: 1rem;
+}
+
+.wrapper>footer>.f-section3{
+    display: flex;
+    margin-top: 80px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1920px;
+}
+.wrapper>footer>.f-section3>.f-section3-left{
+    color: rgb(177, 177, 177);
+    text-align: center;
+    line-height: 70px;
+}
+.wrapper>footer>.f-section3>.f-section3-right{
+    display: flex;
+    margin-right: 110px;
+}
+.wrapper>footer>.f-section3>.f-section3-right>.f-link-bubble{
+    border-radius: 50%;
+    margin-left: 15px;
+    box-shadow: 0 5px 10px 0px rgb(0, 0, 0);
+}
+.wrapper>footer>.f-section3>.f-section3-right>.f-link-bubble>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 70px;
+    height: 70px;
+}
+.wrapper>footer>.f-section3>.f-section3-right>.f-link-bubble>a>img{
+    display: block;
+}
+
+
+/* qickmenu */
+
+.fixed-btn{
+    position: fixed;
+    top: 70vh;
+    right: 30px;
+    z-index: 10;
+}
+
+.fixed-btn>.quick-btn{
+    height: 100px;
+    position: relative;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.fixed-btn>.quick-btn>img{
+    animation-name: updown;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes updown{
+    0%{transform: translateY(0%);}
+    50%{transform: translateY(-10%);}
+    100%{transform: translateY(0%);}
+}
+
+
+.quick-btn .quick-message{
+    border-radius: 22.5px;
+    box-shadow: 0px 3px 2px 0 rgb(209, 209, 209);
+    background-color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    right: 82px;
+    transform: translateY(-50%);
+    display: block;
+    width: 160px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.quick-btn:hover .quick-message{
+    display: flex;
+}
+
+.btn{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.shop-btn .btn{
+    background-color: white;
+    color: rgb(14, 14, 14);
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+}
+
+.arrow-btn .btn{
+    background-color: black;
+}
+

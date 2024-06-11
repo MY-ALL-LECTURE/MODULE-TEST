@@ -1,0 +1,22 @@
+하상훈 학생
+View테이블 생성코드 없이 inner join 만 되어 있습니다(-10)
+피벗 테이블 생성시 열이름에 대한 코드가 없습니다(-5)
+PK,FK 각각의 Error Code에 대한 예외처리가 안되어있습니다(-7점씩)
+나머지는 문제 없습니다
+고생하셨습니다
+
+1.Inner Join View Pivot 생성 SQL 이 적절한가(30점)
+Inner Join SQL 은 적절한가 10점
+View Table 생성은 적절한가 0점(-10)
+피벗 테이블 생성은 적절한가 5점(-5)
+
+2. Procedure 생성 SQL 이 적절한가(40점)
+tbl_registration 에 PK 제약조건 위반시 tbl_errorlog에 저장이 되는가 8점(-7)
+tbl_registration 에 FK 제약조건 위반시 tbl_errorlog에 저장이 되는가 8점(-7)
+tbl_errorlog에 Date는 적절히 삽입 되는가 10점
+
+3. Trigger 생성 SQL 이 적절한가(30점)
+tbl_student 의 update trigger 는 적절한가 8점
+tbl_teacher 의 update trigger 는 적절한가 8점
+tbl_student 의 delete trigger 는 적절한가 7점
+tbl_teacher 의 delete trigger 는 적절한가 7점

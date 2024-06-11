@@ -1,0 +1,24 @@
+박민석 학생 잘해결했습니다.
+다만 user 생성 이후 권한부여 설정이 workbench로만 되어있어서 그부분에 대한
+부분 감점 처리했습니다(-5점)
+나머지는 문제 없습니다
+고생하셨습니다
+
+1 DBMS 선정하여 설치할 수 있는가(20) MYSQL Server 설치가 되었는가 10점
+mysql 명령어를 cmd에서 사용할 수 있도록 path설정 하였는가 10점
+
+2 DBMS 기본 설정을 할 수 있는가(25) 
+mysql 명령어로 root로 Mysql Server에 접속 할수 있는가 15점
+Workbench로 root로 Mysql Server에 접속 할 수 있는가 10점
+
+3 DB접속 계정 생성 및 권한 부여를 할 수 있는가(25)
+Workbench로 user1234계정 접속할 수 있는가 5점(-5점)
+Workbench로 user1234계정이 TestDB 생성을 할 수 있는가 15점
+
+4 DB접속 계정 생성 및 권한 부여를 할 수 있는가(30)
+Create Query 가 적절한가 6점
+Alter Query 가 적절한가 6점
+Drop Query 가 적절한가 6점
+Insert Query 가 적절한가 6점
+Update Query 가 적절한가 6점
+Delete Query 가 적절한가 6점

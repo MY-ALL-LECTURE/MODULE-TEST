@@ -1,0 +1,17 @@
+const unsigned int led[5] = {2,3,4,5,6}; // 사용 하는 led 핀 배열 정의 
+
+void setup() { // 데이터 초기화 및 환경설정 
+  for(int x=0 ; x<5 ; x++){ // 변수 x를 0 으로 지정하고 0,1,2,3,4 까지 점차 증가 하는 조건문 지정
+    pinMode(led[x],OUTPUT); // 입출력모드 설정 ledp[x]는 pin 설정하려는 pin의 번호 , OUTPUT은 출력 
+  }
+}
+void loop() { //  반복실행할 작업 환경 설정 ?
+  for(int i=0;i<5;i++){  // 변수 i를 0으로 지정 하고 0,1,2,3,4까지 점차 증가하는 조건문 지정 
+                        // 각 LED를 차례로 켜고 끄는 루프 
+      for(int x=0;x<=5;x++){ 
+        digitalWrite(led[x],LOW); // 모든 LED를 끔
+      }  
+      digitalWrite(led[i], HIGH); //i번째 LED를 켜고 
+      delay(500);                 //0.5초의 딜레이 
+  }
+}

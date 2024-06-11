@@ -1,0 +1,13 @@
+-- 문제2 
+create or replace view `view_current_lecture`
+as
+select `no`, `lec_duration`, `lec_time`, `t_name`, `lec_name`, `TC`.`class_no`
+from `tbl_current_lecture` TCL
+inner join `tbl_classroom` TC
+on TCL.class_no  = TC.class_no
+inner join `tbl_lecture` TL
+on TCL.lec_code = TL.lec_code
+inner join `tbl_teacher` TT
+on TCL.t_id = TT.t_id;
+
+select * from  `view_current_lecture`;

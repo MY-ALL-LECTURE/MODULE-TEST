@@ -1,0 +1,23 @@
+강지영 학생
+user에 privileges 설정 SQL부분 누락되어있습니다.
+환경변수(path)에 mysql 명령을 쓸수있는지에대한 확인도 안됩니다.
+나머지는 문제 없습니다 고생하셨습니다.
+
+1 DBMS 선정하여 설치할 수 있는가(20) MYSQL Server 설치가 되었는가 10점
+mysql 명령어를 cmd에서 사용할 수 있도록 path설정 하였는가 0점
+
+2 DBMS 기본 설정을 할 수 있는가(25) 
+mysql 명령어로 root로 Mysql Server에 접속 할수 있는가 15점
+Workbench로 root로 Mysql Server에 접속 할 수 있는가 10점
+
+3 DB접속 계정 생성 및 권한 부여를 할 수 있는가(25)
+Workbench로 user1234계정 접속할 수 있는가 0점
+Workbench로 user1234계정이 TestDB 생성을 할 수 있는가 15점
+
+4 DB접속 계정 생성 및 권한 부여를 할 수 있는가(30)
+Create Query 가 적절한가 6점
+Alter Query 가 적절한가 6점
+Drop Query 가 적절한가 6점
+Insert Query 가 적절한가 6점
+Update Query 가 적절한가 6점
+Delete Query 가 적절한가 6점

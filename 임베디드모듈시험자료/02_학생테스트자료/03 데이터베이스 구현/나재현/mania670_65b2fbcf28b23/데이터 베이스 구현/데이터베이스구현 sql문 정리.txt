@@ -1,0 +1,17 @@
+[create] create table tbl_student(
+id int primary ket,
+name varchar(45) null,
+addr varchar(45) null,
+phone varchar(45) null );
+
+[alter] alter table tbl_student add column gender varchar(1) null after phone;
+
+[drop] alter table tbl_student drop phone;
+
+[insert] insert into testdb.tbl_student(id,name,addr,gender) values('1','홍길동','대구','M');
+insert into testdb.tbl_student(id,name,addr,gender) values('2','기명이','울산','M');
+insert into testdb.tbl_student(id,name,addr,gender) values('3','김미녀','인천','W');
+
+[update] update tbl_student set addr='인천' where id ='3';
+
+[delete] delete from tbl_student where id='2';

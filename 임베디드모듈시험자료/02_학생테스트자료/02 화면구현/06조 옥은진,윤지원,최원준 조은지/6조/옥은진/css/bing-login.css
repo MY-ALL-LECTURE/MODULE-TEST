@@ -1,0 +1,180 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+span{
+    color : white;
+}
+body{
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper{
+    margin: 0 100px;
+    width: 65vw; height: 100vh;
+}
+
+
+/* header */
+.login-wrapper>.login-header{
+    height: 70px;
+    /* border:1px solid; */
+
+    position: relative;
+}
+.login-wrapper>.login-header>img{
+    height:100%;
+    /* border:1px solid; */
+
+    position: absolute;
+    top:0; left: 10vw;
+}
+.login-wrapper>.login-header>.menu{
+    display: none;
+}
+
+
+
+/* main */
+.login-wrapper>.login-main{
+    width: 100%; height: 75vh;
+    /* border:1px solid; */
+
+    position: relative;
+
+    background-image: url('../images/main_visual.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+}
+.login-wrapper>.login-main>section{
+    width: 100%; height: 45vh;
+    /* border: 1px solid; */
+
+    position: absolute;
+    left:0; top: 10vh;
+}
+
+.login-wrapper>.login-main>section>div{
+    width:65vw; height:30vh;
+    /* border:1px solid; */
+
+    position: relative;
+}
+/* login-box */
+.login-wrapper>.login-main>section>div>.login-box{
+    /* width: 300px; height: 100%; */
+    width: 16.63vw; height: 100%;
+    /* border: 1px solid; */
+
+    position: absolute;
+    right: 10vw;
+}
+.login-wrapper>.login-main>section>div>.login-box>.title{
+    height:40px;
+    display: flex;
+    align-items: center;
+}
+.login-wrapper>.login-main>section>div>.login-box>.title>span{
+    font-size: 20px;
+}
+.login-wrapper>.login-main>section>div>.login-box>.title>span:nth-child(1){
+    background-color: rgb(228, 0, 0);
+    display: block;
+    width: 30px; height:30px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}
+.login-wrapper>.login-main>section>div>.login-box>form{
+    display: flex;
+    margin: 10px 0;
+}
+.login-wrapper>.login-main>section>div>.login-box>form input{
+    /* width: 180px;height:35px; */
+    width: 10.38vw;height:35px;
+    margin-top:.8px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+    background-color: transparent;
+}
+.login-wrapper>.login-main>section>div>.login-box>form a{
+    display: block;
+    background-color: rgb(228, 0, 0);
+    /* width: 100px; height: 80px; */
+    width: 5.2vw; height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+.login-wrapper>.login-main>section>div>.login-box>.middel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-wrapper>.login-main>section>div>.login-box>.bottom a{
+    display: block;
+    background-color: rgb(57, 57, 57);
+    /* width: 300px; height: 40px; */
+    width: 16.63vw; height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 0;
+} 
+.login-wrapper>.login-main>section>.guide{
+    width: 21.5vw; height:15.5vh;
+    /* border: 1px solid white; */
+
+    position: absolute;
+    left: 10vw; bottom: 0;
+
+    display: flex;
+}
+.login-wrapper>.login-main>section>.guide>div{
+    height: 15.5vh;
+}
+.login-wrapper>.login-main>section>.guide a{
+    border: 1px solid lightgray;
+    /* width: 135px; height:135px; */
+    width: 7vw; height: 15vh;
+    font-size: .8rem;
+    text-align: center;
+    /* line-height: 110px; */
+    /* line-height: 15vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapper>.login-main>section>.guide>div>a>span:nth-child(1){
+    display: block;
+    text-align: center;
+    height:50px;
+    font-size: 3rem;
+    /* line-height: 100px; */
+}
+.login-wrapper>.login-main>section>.guide>div>a>span:nth-child(2){
+    position: absolute;
+    bottom: 2vh;
+    width: 7vw;
+}
+
+/* footer */
+.login-wrapper>.login-main>footer{
+    width: 100%; height: 7vh;
+    /* border:1px solid; */
+    position: absolute;
+    left:0; bottom:0;
+    text-align: center;
+}
+.login-wrapper>.login-main>footer>div{
+    position: absolute;
+    left: 28vw;
+}
+.login-wrapper>.login-main>footer a{
+    color: black;
+    line-height: 7vh;
+    font-size: .9rem;
+}

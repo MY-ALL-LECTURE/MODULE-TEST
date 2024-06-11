@@ -1,0 +1,12 @@
+use testdb;
+create table tbl_student(id int primary key,
+		      name varchar(45) not null,
+		      addr varchar(45) not null,
+		      phone varchar(45) not null);
+alter table tbl_student add column gender varchar(1) not null;
+alter table tbl_student drop column phone;
+insert into testdb.tbl_student(id, name, addr, gender) values (1, '홍길동', '대구', 'M');
+insert into testdb.tbl_student(id, name, addr, gender) values (2, '기명이', '울산', 'M');
+insert into testdb.tbl_student(id, name, addr, gender) values (3, '김미녀', '인천', 'W');
+update tbl_student set addr='창원' where addr = '인천';
+delete from tbl_student where id =2;
